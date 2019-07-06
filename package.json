@@ -33,7 +33,7 @@
     "extends @wordpress/browserslist-config"
   ],
   "scripts": {
-    "build:style": "node-sass sass/style.scss docs/style.css --output-style expanded && postcss -r docs/style.css",
+    "build:style": "node-sass sass/style.scss docs/style.css --output-style compressed && postcss -r docs/style.css",
     "build": "run-p \"build:*\"",
     "start": "chokidar \"**/*.scss\" -c \"npm run build\" --initial"
   }
