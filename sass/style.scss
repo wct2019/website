@@ -147,7 +147,7 @@ body {
 
 .site-header {
   padding: 80px 0;
-  background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_bg.jpg') no-repeat;
+  background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') no-repeat;
   background-size: cover;
   position: relative;
   &::after {
@@ -189,8 +189,10 @@ body {
 		}
 	}
 }
+
 @media only screen and (min-width: 768px) {
   .site-header {
+    background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_bg.jpg');
     &::after {
       animation: bgscroll 26s linear infinite;
     }
