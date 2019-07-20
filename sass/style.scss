@@ -150,6 +150,7 @@ body {
   background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') no-repeat;
   background-size: cover;
   position: relative;
+  min-height: 90vh;
   &::after {
     content: "";
     display: block;
