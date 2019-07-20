@@ -147,8 +147,8 @@ body {
 
 .site-header {
   padding: 80px 0;
-  background-color: #f5f5f5;
-  background-image: repeating-linear-gradient(-45deg, #fff, #fff 4px, transparent 0, transparent 15px);
+  background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_bg.jpg') no-repeat;
+  background-size: cover;
   position: relative;
   &::after {
     content: "";
