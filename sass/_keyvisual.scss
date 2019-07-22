@@ -6,12 +6,17 @@
   display: none;
 }
 body{
+  /*全体ページ共通*/
   .site-header {
-    padding: 80px 0;
+    padding: 90px 0 80px 0;
     background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') repeat-x;
     background-size: auto 150%;
     position: relative;
     display: block;
+    @include mq(sp){
+      background-size: 100% auto;
+      padding: 70px 0 50px 0;
+    }
     &::after {
       content: "";
       display: block;
@@ -51,6 +56,16 @@ body{
   		}
   	}
     .site-branding-container{
+      @include mq(sp){
+        width: 70vw;
+        height: 70vw;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;;
+        align-items: center;
+        margin: 0 auto;
+      }
       .site-branding{
         .site-title {
           position: relative;
@@ -61,19 +76,25 @@ body{
             order: 1;
             display: block;
             width: 80%;
-            max-width: 480px;
-            height: 22vmax;
-            max-height: 240px;
-            background-image: url("https://2019.tokyo.wordcamp.org/files/2019/06/wctokyo_logo_web.png");
+            max-width: 680px;
+            height: 24vmax;
+            max-height: 300px;
+            background-image: url("http://wordcamptokyo2019.local/wp-content/uploads/2019/07/wctokyo_logo_web_page-1.png");
             background-repeat: no-repeat;
             background-position: center center;
             background-size: 100% auto;
             text-indent: -9999px;
+            @include mq(sp){
+              background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/wctokyo_web.png');
+              width: 50vw;
+              height: 50vw;
+            }
           }
         }
       }
     }
   }
+  /*トップページ*/
   &.home{
     .site-header {
       padding: 90px 0 80px 0;
