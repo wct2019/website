@@ -887,3 +887,10 @@ h2.wccsp-dates {
     margin: auto;
   }
 }
+.image-filters-enabled{
+  .entry{
+    .post-thumbnail{
+      display: none;
+    }
+  }
+}
