@@ -29,3 +29,34 @@ $breakpoints: (
     @content;
   }
 }
+
+/*
+	keyframe
+*/
+/* --------------------
+ keyframe animation
+-------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bgscroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes kvbgscroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -4250px 0;
+  }
+}

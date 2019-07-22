@@ -485,25 +485,7 @@ h2.wccsp-dates {
 /* ----
  end for coming soon mode style */
 
-/*
-	keyframe
-*/
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes bgscroll {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
+
 
 // ADD by mimi 2019/06/04
 // Fix main-navivgation
