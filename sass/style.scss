@@ -1,32 +1,7 @@
 @import "config";
+@import "base";
 @import "widget";
-/* --------------------
-  全体
--------------------- */
-html {
-  font-size: $rootfont;
-}
-html[lang="ja"] body,
-html[lang="ja"] button,
-html[lang="ja"] input,
-html[lang="ja"] select,
-html[lang="ja"] textarea,
-html[lang="ja"] h1,
-html[lang="ja"] h2,
-html[lang="ja"] h3,
-html[lang="ja"] h4,
-html[lang="ja"] h5,
-html[lang="ja"] h6,
-html[lang="ja"] a,
-html[lang="ja"] table,
-html[lang="ja"] .site-title {
-  font-family: $fontfamily;
-}
 
-/* テキストカラー */
-body {
-  color: $textcolor;
-}
 .entry .entry-content > * {
   margin-left: auto;
   margin-right: auto;
