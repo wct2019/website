@@ -1,24 +1,11 @@
-/* ----
-for ティザーサイト
-add 2019/06/01 21:45
-*/
-
+@import "config";
+@import "widget";
 /* --------------------
   全体
 -------------------- */
-$primary: #289563;
-$secondary: #d69d12;
-$textcolor: #333;
-
-$gold: #ffb74a;
-$silver: #c4bfc4;
-$bronze: #9e5318;
-$green: #69b74b;
-
 html {
-  font-size: 16px;
+  font-size: $rootfont;
 }
-
 html[lang="ja"] body,
 html[lang="ja"] button,
 html[lang="ja"] input,
@@ -33,7 +20,7 @@ html[lang="ja"] h6,
 html[lang="ja"] a,
 html[lang="ja"] table,
 html[lang="ja"] .site-title {
-  font-family: Noto Sans JP, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+  font-family: $fontfamily;
 }
 
 /* テキストカラー */
@@ -459,50 +446,6 @@ body{
         &:first-child {
           text-align: center;
         }
-      }
-    }
-  }
-}
-
-/* --------------------
-  ウィジェット
--------------------- */
-#colophon {
-  .widget-column {
-    display: block;
-    /* ウィジェット */
-    .widget {
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 60px;
-      width: 100%;
-      max-width: 100%;
-      display: flex;
-      flex-flow: column;
-      align-items: center;
-      /* ウィジェットタイトル */
-      .widget-title {
-        display: inline-block;
-        font-size: 1.4rem;
-        font-style: italic;
-        letter-spacing: 0.05em;
-        font-weight: bold;
-        padding: 0 4px 0.4em;
-        border-bottom: 3px solid $primary;
-        &::before {
-          display: none;
-        }
-      }
-    }
-  }
-}
-@media only screen and (min-width: 768px) {
-  #colophon {
-    .widget-column {
-      /* ウィジェット */
-      .widget {
-        margin-bottom: 80px;
-        max-width: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
       }
     }
   }
