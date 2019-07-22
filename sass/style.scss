@@ -1,7 +1,7 @@
 @import "config"; //設定ファイル
 @import "base"; //全体用設定
-@import "navigation"; //全体用設定
-@import "keyvisual"; //全体用設定
+@import "navigation"; //グローバルナビゲーション用設定
+@import "keyvisual"; //キービジュアル用設定
 @import "widget"; //ウィジェット設定
 
 .entry .entry-content > * {

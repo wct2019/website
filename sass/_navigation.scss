@@ -12,7 +12,6 @@
   z-index: 10;
   border-bottom: 1px solid #eeeeee;
 }
-
 .menu-globalmenu-container > .main-menu {
 }
 .main-navigation {
@@ -103,7 +102,7 @@
     }
   }
 }
-@media only screen and (max-width: 480px) {
+@include mq(sp){
   .main-navigation {
     .menu-item {
       & > a {
