@@ -15,3 +15,17 @@ $green: #69b74b;
 -------------------- */
 $rootfont: 16px;
 $fontfamily: Noto Sans JP, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+
+/* --------------------
+ media query
+-------------------- */
+$breakpoints: (
+	'sp': 'screen and (max-width: 480px)', //スマートフォン ブレイクポイント
+	'pc': 'screen and (min-width: 768px)' //一般PC ブレイクポイント
+) !default;
+//メディアクエリ指定用mixin
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
