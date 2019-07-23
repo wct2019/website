@@ -32,7 +32,7 @@
 /*スポンサー書き出し部分*/
 .wcorg-sponsors{
   [class^="wcorg-sponsor-level-"]{
-    margin-bottom: 80px;
+    margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -48,7 +48,7 @@
         position: inherit;
         display: block;
         margin: 0 auto;
-        width: 80px;
+        width: 60px;
         height: auto;
         transform: none;
         background: none;
