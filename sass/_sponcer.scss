@@ -140,4 +140,18 @@
       width: 25%;
     }
   }
+  .wcorg-sponsor-level-in-kind{
+    h2{
+      color: #666666;
+      &::before{
+        content: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNTIuNDEgMzUyLjQxIj4KICA8cGF0aCBmaWxsPSIjNjY2IiBkPSJNMzUyLjQxIDE3Ni4yMUMzNTIuNDEgNzguODkgMjczLjUyIDAgMTc2LjIxIDBjMCAxNzUuMzggMTc2LjIgMTc2LjIxIDE3Ni4yIDE3Ni4yMXpNMTc2LjIxIDBDNzguODkgMCAwIDc4Ljg5IDAgMTc2LjIxIDE3Ni40IDE3Ni4yMSAxNzYuMjEgMCAxNzYuMjEgMHpNMCAxNzYuMjFjMCA5Ny4zMSA3OC44OSAxNzYuMjEgMTc2LjIxIDE3Ni4yMUMxNzYuMjEgMTc2Ljg0IDAgMTc2LjIxIDAgMTc2LjIxem0xNzYuMjEgMTc2LjJjOTcuMzIgMCAxNzYuMjEtNzguODkgMTc2LjIxLTE3Ni4yMS0xNzUuMTIuMDEtMTc2LjIxIDE3Ni4yMS0xNzYuMjEgMTc2LjIxeiIvPgo8L3N2Zz4=');
+      }
+      &::after{
+        background: #666666;
+      }
+    }
+    .wcorg-sponsor{
+      width: 25%;
+    }
+  }
 }
