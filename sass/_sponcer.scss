@@ -1,0 +1,161 @@
+/* --------------------
+  スポンサー
+-------------------- */
+/*スポンサー用見出し*/
+.entry-content{
+  .sponcer-title-heading{
+    text-align: center;
+    display: flex;
+    justify-content: center;;
+    align-items: center;
+    padding-left: 0;
+    font-size: 2.4rem;
+    &::before,
+    &::after{
+      content: "";
+      display: block;
+      height: 1px;
+      flex-grow: 1;
+      background: #cccccc;
+      width: auto;
+      position: inherit;
+      border-radius: 0;
+    }
+    &::before{
+      margin-right: 0.5em;
+    }
+    &::after{
+      margin-left: 0.5em;
+    }
+  }
+}
+/*スポンサー書き出し部分*/
+.wcorg-sponsors{
+  [class^="wcorg-sponsor-level-"]{
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    h2{
+      text-align: center;
+      padding: 0 0 10px 0;
+      font-size: 2rem;
+      position: inherit;
+      width: 100%;
+      margin: 0 0 30px 0;
+      &::before{
+        content: "";
+        position: inherit;
+        display: block;
+        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        transform: none;
+        background-color: transparent;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+      &::after{
+        content: "";
+        display: block;
+        width: 120px;
+        height: 2px;
+        background: #cccccc;
+        margin: 10px auto 0 auto;
+      }
+    }
+    .wcorg-sponsor{
+      text-align: center;
+      .wcorg-sponsor-description{
+        display: block;
+        margin: 0 auto 1em auto;
+        width: 90%;
+        a{
+          border: none;
+          transition: all 0.2s ease;
+          img{
+            max-width: 100%;
+            height: auto;
+            max-height: 80px;
+            width: auto;
+          }
+          &:hover{
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+  }
+  .wcorg-sponsor-level-gold{
+    h2{
+      color: #ffb74a;
+      &::before{
+        background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/gold.png");
+      }
+      &::after{
+        background: #ffb74a;
+      }
+    }
+    .wcorg-sponsor{
+      width: 100%;
+    }
+  }
+  .wcorg-sponsor-level-silver{
+    h2{
+      color: #c4bfc4;
+      &::before{
+        background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/silver.png");
+      }
+      &::after{
+        background: #c4bfc4;
+      }
+    }
+    .wcorg-sponsor{
+      width: 50%;
+    }
+  }
+  .wcorg-sponsor-level-bronze{
+    h2{
+      color: #9e5318;
+      &::before{
+        background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/bronze.png");
+      }
+      &::after{
+        background: #9e5318;
+      }
+    }
+    .wcorg-sponsor{
+      width: 33.3%;
+    }
+  }
+  .wcorg-sponsor-level-green{
+    h2{
+      color: #69b74b;
+      &::before{
+        background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/green.png");
+      }
+      &::after{
+        background: #69b74b;
+      }
+    }
+    .wcorg-sponsor{
+      width: 25%;
+    }
+  }
+  .wcorg-sponsor-level-in-kind{
+    h2{
+      color: #666666;
+      &::before{
+        background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/inkind.png");
+      }
+      &::after{
+        background: #666666;
+      }
+    }
+    .wcorg-sponsor{
+      width: 25%;
+    }
+  }
+}

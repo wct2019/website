@@ -186,6 +186,14 @@
     }
   }
 }
+
+//投稿者プロフィール
+.author-bio {
+  .author-description {
+    display: none;
+  }
+}
+
 /* スポンサー */
 .sponsor-level {
   display: flex;
