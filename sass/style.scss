@@ -1,3 +1,6 @@
+@import "sponcer";
+@import "timetable";
+
 /* ----
 for ティザーサイト
 add 2019/06/01 21:45
@@ -36,8 +39,6 @@ html[lang="ja"] .site-title {
   font-family: Noto Sans JP, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
 }
 
-@import "sponcer";
-
 /* テキストカラー */
 body {
   color: $textcolor;
@@ -45,6 +46,12 @@ body {
 .entry .entry-content > * {
   margin-left: auto;
   margin-right: auto;
+  max-width: calc(10 * (100vw / 12) - 28px);
+}
+@media only screen and (min-width: 1168px){
+  .entry .entry-content > * {
+    max-width: calc(8 * (100vw / 12) - 28px);
+  }
 }
 .alignfull {
   .wp-block-column {

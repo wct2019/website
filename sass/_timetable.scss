@@ -1,0 +1,242 @@
+/* --------------------
+ タイムテーブル
+-------------------- */
+/*色設定設定
+----------------------*/
+$tablebordercolor: #e1e1e1;
+$favbtnhovercolor: #d69d12;
+$lunchcolor: rgb(255,245,240);
+$track1: #aceccf;
+$track2: #edde7e;
+$track3: #acdfec;
+$track4: #fcdcea;
+
+/*タイムテーブル
+----------------------*/
+.entry-content{
+  .wcpt-schedule{
+    border-bottom: 1px solid $tablebordercolor !important;
+    border-right: 1px solid $tablebordercolor !important;
+    border-top-width: 0 !important;
+    border-left-width: 0 !important;
+    td,th{
+      border-top: 1px solid $tablebordercolor !important;
+      border-left: 1px solid $tablebordercolor !important;
+      border-bottom-width: 0 !important;
+      border-right-width: 0 !important;
+    }
+    /*トラック情報設定
+    ----------------------*/
+    thead{
+      tr{
+        th{
+          text-align: center;
+          font-size: 0.9rem;
+          font-weight: bold;
+          text-align: center;
+          width: 22%;
+          &.wcpt-col-time{
+            background: #444444;
+            color: #ffffff;
+            width: 12%;
+          }
+          &:nth-last-of-type(-n+4){
+            .wcpt-track-name{
+              &::before{
+                content: "";
+                display: block;
+                width: 25px;
+                height: 25px;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                background-position: center;
+                margin: 0 auto;
+              }
+            }
+          }
+          &:nth-of-type(2){
+            background: $track1;
+            color: darken($track1,65%);
+            .wcpt-track-name{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track1.png');
+              }
+            }
+          }
+          &:nth-of-type(3){
+            background: $track2;
+            color: darken($track2,55%);
+            .wcpt-track-name{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track2.png');
+              }
+            }
+          }
+          &:nth-of-type(4){
+            background: $track3;
+            color: darken($track3,65%);
+            .wcpt-track-name{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track3.png');
+              }
+            }
+          }
+          &:nth-of-type(5){
+            background: $track4;
+            color: darken($track4,80%);
+            .wcpt-track-name{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track4.png');
+              }
+            }
+          }
+        }
+      }
+    }
+    /*セッション内容設定
+    ----------------------*/
+    tbody{
+      tr{
+        &:first-child,
+        &:nth-child(odd){
+          td{
+            background: transparent;
+            color: inherit;
+            text-align: inherit;
+          }
+        }
+        td{
+          &.wcpt-time{
+            text-align: center;
+            font-size: 0.8rem;
+            vertical-align: middle;
+            background: #f9f9f9;
+          }
+          .wcb-session-cell-content{
+            a{
+              color: #289563;
+              border: none;
+              &:hover{
+                text-decoration: underline !important;
+              }
+            }
+          }
+          div.wcb-session-favourite-icon{
+            a.fav-session-button{
+              border: none;
+              &:hover{
+                color: $favbtnhovercolor;
+              }
+            }
+          }
+          &.wcb-favourite-session{
+            div.wcb-session-favourite-icon{
+              a.fav-session-button{
+                color: $favbtnhovercolor;
+              }
+            }
+          }
+        }
+        &.global-session{
+          td{
+            text-align: center;
+          }
+        }
+        /*個別時間帯の設定
+        ----------------------*/
+        &.wcpt-time-1000{
+          .wcpt-session-empty{
+            background: $tablebordercolor;
+          }
+        }
+        &.wcpt-time-1100{
+          .wcpt-session-empty{
+            border-top-width: 0 !important;
+          }
+        }
+        &.wcpt-time-1200{
+          td{
+            background: $lunchcolor;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*スマートフォン
+----------------------*/
+@media screen and (max-width: 700px){
+  .entry-content{
+    .wcpt-schedule{
+      border-bottom: 0 !important;
+      border-right: 0 !important;
+      border-top-width: 0 !important;
+      border-left-width: 0 !important;
+      tr{
+        border: 1px solid $tablebordercolor !important;
+        td{
+          border-bottom: 0 !important;
+          border-right: 0 !important;
+          border-top-width: 0 !important;
+          border-left-width: 0 !important;
+        }
+      }
+      tbody{
+        tr{
+          &.global-session{
+            td{
+              text-align: left;
+            }
+          }
+          td{
+            &.wcpt-time{
+              border-bottom: 1px solid $tablebordercolor !important;
+              text-align: center;
+            }
+            &.wcpt-session-type-session{
+              &::before{
+                border-bottom: none !important;
+                border-top: none !important;
+                font-size: 0.9rem;
+                padding: 8px 10px;
+                font-weight: bold;
+              }
+            }
+            &:nth-of-type(2){
+              &::before{
+                background: $track1;
+                color: darken($track1,65%);
+              }
+            }
+            &:nth-of-type(3){
+              &::before{
+                background: $track2;
+                color: darken($track2,55%);
+              }
+            }
+            &:nth-of-type(4){
+              &::before{
+                background: $track3;
+                color: darken($track3,65%);
+              }
+            }
+            &:nth-of-type(5){
+              &::before{
+                background: $track4;
+                color: darken($track4,80%);
+              }
+            }
+          }
+          /*個別時間帯の設定
+          ----------------------*/
+          &.wcpt-time-1000{
+            .wcpt-session-empty{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
