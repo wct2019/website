@@ -191,9 +191,7 @@ body{
     background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') repeat-x;
     background-size: auto 150%;
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
     &::after {
       content: "";
       display: block;
@@ -246,11 +244,12 @@ body{
             max-width: 480px;
             height: 22vmax;
             max-height: 240px;
-            background-image: url("https://2019.tokyo.wordcamp.org/files/2019/06/wctokyo_logo_web.png");
+            background:#fff url("https://2019.tokyo.wordcamp.org/files/2019/06/wctokyo_logo_web.png");
             background-repeat: no-repeat;
             background-position: center center;
-            background-size: 100% auto;
+            background-size: 80% auto;
             text-indent: -9999px;
+            border-radius: 10px;
           }
         }
       }
@@ -263,6 +262,9 @@ body{
       background-size: auto 100%;
       animation: bgscroll 60s linear infinite;
       transform: translate3d(0,0,0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .site-branding-container{
         width: 55vw;
         height: 55vw;
@@ -284,6 +286,10 @@ body{
               width: 100%;
               margin: 0 auto;
               animation: fadeIn 3s, fadeOut 3s 5s forwards;
+              background: url("https://2019.tokyo.wordcamp.org/files/2019/06/wctokyo_logo_web.png") no-repeat;
+              background-size: 100% auto;
+              border-radius: 0;
+              background-position: center center;
             }
           }
         }
