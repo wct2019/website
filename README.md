@@ -53,6 +53,16 @@ npm start
 npm run build:style
 ```
 
+1. gulpで監視
+```
+gulp watch
+```
+
+2. gulpでビルド
+```
+gulp css
+```
+
 sass/style.scss → docs/style.css にコンパイルされる。  
 ローカルサイトで、スタイルが反映されていれば、無事に成功！
 
