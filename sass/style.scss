@@ -1,5 +1,3 @@
-@import "sponcer";
-
 /* ----
 for ティザーサイト
 add 2019/06/01 21:45
@@ -37,6 +35,8 @@ html[lang="ja"] table,
 html[lang="ja"] .site-title {
   font-family: Noto Sans JP, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
 }
+
+@import "sponcer";
 
 /* テキストカラー */
 body {
