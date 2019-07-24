@@ -266,8 +266,8 @@ body{
       justify-content: center;
       align-items: center;
       .site-branding-container{
-        width: 55vw;
-        height: 55vw;
+        width: 90vw;
+        height: 90vw;
         max-width: 720px;
         max-height: 720px;
         background: #ffffff;
@@ -278,7 +278,7 @@ body{
         .site-branding{
           margin: 0;
           .site-title {
-            width: 40vw;
+            width: 70vw;
             max-width: 680px;
             height: auto;
             display: block;
@@ -311,6 +311,21 @@ body{
   			display: flex;
   		}
   	}
+    &.home{
+      .site-header {
+        .site-branding-container{
+          width: 55vw;
+          height: 55vw;
+          max-width: 720px;
+          max-height: 720px;
+          .site-branding{
+            .site-title{
+              width: 40vw;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
