@@ -302,6 +302,11 @@
             }
             .sponsor-logo{
               width: 33.3%;
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 10px;
+                }
+              }
             }
           }
           &.bronze{
@@ -316,6 +321,11 @@
             }
             .sponsor-logo{
               width: 33.3%;
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
+              }
             }
           }
           &.green{
@@ -333,6 +343,11 @@
               img{
                 padding: 10px;
               }
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
+              }
             }
           }
           &.in-kind{
@@ -349,6 +364,11 @@
               width: 25%;
               img{
                 padding: 10px;
+              }
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
               }
             }
           }
