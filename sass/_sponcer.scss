@@ -180,7 +180,7 @@
   .widget-column{
     .widget{
       &.wcb_widget_sponsors{
-        max-width: 680px;
+        max-width: 580px;
         .widget-title{
           text-align: center;
           display: flex;
@@ -259,7 +259,7 @@
               width: 100%;
               height: auto;
               max-height: inherit;
-              max-width: 480px;
+              max-width: 420px;
             }
           }
           &.platinum{
@@ -330,6 +330,9 @@
             }
             .sponsor-logo{
               width: 25%;
+              img{
+                padding: 10px;
+              }
             }
           }
           &.in-kind{
@@ -344,6 +347,9 @@
             }
             .sponsor-logo{
               width: 25%;
+              img{
+                padding: 10px;
+              }
             }
           }
         }
