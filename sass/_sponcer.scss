@@ -274,11 +274,6 @@
             }
             .sponsor-logo{
               width: 100%;
-              @media only screen and (max-width: 480px) {
-                img{
-                  padding: 10px;
-                }
-              }
             }
           }
           &.gold{
@@ -293,6 +288,11 @@
             }
             .sponsor-logo{
               width: 50%;
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 10px;
+                }
+              }
             }
           }
           &.silver{
