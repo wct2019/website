@@ -250,6 +250,7 @@
           }
           .sponsor-logo{
             text-align: center;
+            flex: none;
             &:hover{
               border-color: transparent;
               opacity: 0.6;
@@ -257,6 +258,8 @@
             img{
               width: 100%;
               height: auto;
+              max-height: inherit;
+              max-width: 480px;
             }
           }
           &.platinum{
