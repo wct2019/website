@@ -1,0 +1,54 @@
+/* --------------------
+  ウィジェット
+-------------------- */
+#colophon {
+  .widget-column {
+    display: block;
+    /* ウィジェット */
+    .widget {
+      margin-right: auto;
+      margin-left: auto;
+      margin-bottom: 60px;
+      width: 100%;
+      max-width: 100%;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      /* ウィジェットタイトル */
+      .widget-title {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-style: italic;
+        letter-spacing: 0.05em;
+        font-weight: bold;
+        padding: 0 4px 0.4em;
+        border-bottom: 3px solid $primary;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  #colophon {
+    .widget-column {
+      /* ウィジェット */
+      .widget {
+        margin-bottom: 80px;
+        max-width: calc(3 * 1rem) calc(10% + 60px) calc(1rem / 2);
+      }
+    }
+  }
+}
+
+/* SNS */
+.jetpack-social-widget-list {
+  text-align: center;
+}
+#icon-twitter {
+  fill: #1da1f2;
+}
+#icon-facebook {
+  fill: #3c5a99;
+}

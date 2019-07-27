@@ -1,0 +1,63 @@
+/* --------------------
+ color settings
+-------------------- */
+$primary: #289563;
+$secondary: #d69d12;
+$textcolor: #333;
+
+$platinum: #cab4a0;
+$gold: #ffb74a;
+$silver: #c4bfc4;
+$bronze: #9e5318;
+$green: #69b74b;
+
+/* --------------------
+ font
+-------------------- */
+$rootfont: 16px;
+$fontfamily: Noto Sans JP, Hiragino Kaku Gothic Pro, Meiryo, sans-serif;
+
+/* --------------------
+ media query
+-------------------- */
+$breakpoints: (
+	'sp': 'screen and (max-width: 480px)', //スマートフォン ブレイクポイント
+	'pc': 'screen and (min-width: 768px)' //一般PC ブレイクポイント
+) !default;
+//メディアクエリ指定用mixin
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+/*
+	keyframe
+*/
+/* --------------------
+ keyframe animation
+-------------------- */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes bgscroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+@keyframes kvbgscroll {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -4250px 0;
+  }
+}

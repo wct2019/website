@@ -1,0 +1,48 @@
+/* --------------------
+  フッター
+-------------------- */
+#colophon {
+  .site-info {
+    margin: 0 !important;
+    text-align: center;
+    padding: 60px 20px;
+    font-size: 0.9rem;
+    background-color: $primary;
+    color: #fff !important;
+    display: block;
+    border-top: 10px solid $secondary;
+    a {
+      color: #ffffff;
+      &:hover {
+        color: lighten($secondary, 20%);
+        text-decoration: underline;
+      }
+    }
+  }
+  .footer-navigation {
+    margin-top: 20px;
+    display: block;
+    .footer-menu {
+      li {
+        display: block;
+        text-align: left;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        a {
+          padding: 8px 0;
+          display: block;
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 768px) {
+  #colophon {
+    .footer-navigation {
+      .footer-menu {
+        li {
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
