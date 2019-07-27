@@ -1,0 +1,190 @@
+/* --------------------
+  全体ベース設定
+-------------------- */
+html {
+  font-size: $rootfont;
+}
+html[lang="ja"] body,
+html[lang="ja"] button,
+html[lang="ja"] input,
+html[lang="ja"] select,
+html[lang="ja"] textarea,
+html[lang="ja"] h1,
+html[lang="ja"] h2,
+html[lang="ja"] h3,
+html[lang="ja"] h4,
+html[lang="ja"] h5,
+html[lang="ja"] h6,
+html[lang="ja"] a,
+html[lang="ja"] table,
+html[lang="ja"] .site-title {
+  font-family: $fontfamily;
+}
+/* テキストカラー */
+body {
+  color: $textcolor;
+}
+
+/* --------------------
+  記事タイトル
+-------------------- */
+.sticky-post {
+  display: none; //おすすめ消す
+}
+
+.entry-header {
+  margin-bottom: 40px !important;
+  padding-top: 30px;
+  &::after {
+    content: "";
+    width: 20px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: $primary;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(-55deg);
+  }
+}
+.entry-title {
+  position: relative;
+  text-align: center;
+  padding-bottom: 0.95em;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  letter-spacing: 0.05em;
+  &::before {
+    display: none !important;
+  }
+  &::after {
+    color: #ccc;
+    letter-spacing: 0.18em;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    font-size: 0.5em;
+    font-weight: 800;
+  }
+}
+
+.post-397 .entry-title::after {
+  content: "OUTLINE";
+}
+.post-358 .entry-title::after {
+  content: "ROADMAP";
+}
+
+/* --------------------
+  記事内
+-------------------- */
+//見出し
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+  margin: 2em 0 1em;
+}
+.entry-content h1 {
+  font-size: 2rem;
+}
+.entry-content h2 {
+  position: relative;
+  font-size: 1.6rem;
+  padding-left: 1em;
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0.5em;
+    height: 0.5em;
+    margin: 0;
+    background-color: $primary;
+    border-radius: 50%;
+  }
+}
+.entry-content h3 {
+  font-size: 1.3rem;
+  &::before {
+    content: "-";
+    color: $primary;
+    margin-right: 0.3em;
+    line-height: 1.8;
+  }
+}
+.entry-content h4 {
+  font-size: 1.05rem;
+  border-left: 3px dotted $primary;
+  padding-left: 0.3em;
+}
+.entry-content h5,
+.entry-content h6 {
+  font-size: 1rem;
+}
+.entry-content{
+  .themeTitle{
+    font-size: 2rem;
+    color: $primary;
+    &::before {
+      display: none;
+    }
+  }
+  p {
+    font-size: 1rem;
+    line-height: 2;
+  }
+  .has-small-font-size {
+    font-size: 0.85rem !important;
+  }
+  a {
+    color: $secondary;
+    border-bottom: 1px dotted $secondary;
+    text-decoration: none !important;
+    &:hover {
+      // 	border: none;
+    }
+  }
+  table {
+    th,
+    td {
+      font-size: 0.9rem;
+      border-color: #eee !important;
+      border-width: 2px;
+      padding: 10px;
+    }
+    tr {
+      &:nth-child(odd) td {
+        background: #f6f6f6;
+      }
+      &:first-child td {
+        background: $primary;
+        color: #ffffff;
+        text-align: center;
+        padding: 15px;
+      }
+      td {
+        &:first-child {
+          text-align: center;
+        }
+      }
+    }
+  }
+  .wp-block-cover {
+    h2 {
+      &:before {
+        display: none;
+      }
+      margin: auto;
+    }
+  }
+}
+//投稿者プロフィール
+.author-bio {
+  .author-description {
+    display: none;
+  }
+}

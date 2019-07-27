@@ -1,0 +1,170 @@
+/* --------------------
+  ヘッダービジュアル
+-------------------- */
+//header
+.site-description {
+  display: none;
+}
+body{
+  /*全体ページ共通*/
+  .site-header {
+    padding: 90px 0 80px 0;
+    background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') repeat-x;
+    background-size: auto 122%;
+    position: relative;
+    display: block;
+    @include mq(sp){
+      background-size: 100% auto;
+      padding: 70px 0 50px 0;
+    }
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      left: 0;
+      bottom: -2px;
+      background: url("https://2019.tokyo.wordcamp.org/files/2019/06/wave.png") repeat-x;
+      background-size: auto 100%;
+    }
+  	&.featured-image{
+  		display: block;
+  		overflow: inherit;
+  		text-shadow: none;
+  		background-color: #f5f5f5;
+  		background-repeat: repeat;
+  		background-size: inherit;
+  		min-height: inherit;
+  		margin-bottom: 0;
+  		&::after{
+  			content: "";
+  			display: block;
+  			position: absolute;
+  			width: 100%;
+  			height: 20px;
+  			left: 0;
+  			bottom: -2px;
+  			top: inherit;
+  			background: url("https://2019.tokyo.wordcamp.org/files/2019/06/wave.png") repeat-x;
+  			background-size: auto 100%;
+  			transition: none;
+  			opacity: 1;
+  		}
+  		.site-featured-image{
+  			display: none;
+  		}
+  	}
+    .site-branding-container{
+      @include mq(sp){
+        width: 70vw;
+        height: 70vw;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .site-branding{
+        .site-title {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          & > a {
+            order: 1;
+            display: block;
+            width: 80%;
+            max-width: 680px;
+            height: 24vmax;
+            max-height: 300px;
+            background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/wctokyo_logo_web_page.png");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% auto;
+            text-indent: -9999px;
+            @include mq(sp){
+              background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/wctokyo_web.png');
+              width: 50vw;
+              height: 50vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  /*トップページ*/
+  &.home{
+    .site-header {
+      padding: 90px 0 80px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 90vh;
+      background-size: auto 100%;
+      animation: kvbgscroll 60s linear infinite;
+      transform: translate3d(0,0,0);
+      @include mq(sp){
+        padding-bottom: 50px;
+        min-height: 50vh;
+      }
+      .site-branding-container{
+        width: 55vw;
+        height: 55vw;
+        max-width: 720px;
+        max-height: 720px;
+        background: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include mq(sp){
+          width: 90vw;
+          height: 90vw;
+        }
+        .site-branding{
+          margin: 0;
+          .site-title {
+            width: 40vw;
+            max-width: 680px;
+            height: auto;
+            display: block;
+            @include mq(sp){
+              width: 70vw;
+              max-width: auto;
+            }
+            & > a {
+              width: 100%;
+              background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/wctokyo_web.png');
+              margin: -20px auto 0 auto;
+              height: 40vw;
+              max-height: 530px;
+              max-width: 530px;
+              animation: fadeIn 3s, fadeOut 3s 5s forwards;
+              @include mq(sp){
+                height: 70vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(pc){
+  body{
+    .site-header {
+      background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_bg.jpg');
+      &::after {
+        animation: bgscroll 26s linear infinite;
+      }
+    }
+  	.featured-image{
+  		.site-title{
+  			display: flex;
+  		}
+  	}
+  }
+}
