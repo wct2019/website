@@ -1,0 +1,78 @@
+/* add custom class "coming-soon" */
+#wccsp-introduction{
+  .coming-soon__box {
+    border: 0.2em solid #edb62e;
+    padding: 21px;
+    display: block;
+  }
+}
+.coming-soon__box__item {
+  display: block;
+  margin-bottom: 18px;
+  line-height: 1.85em;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #edb62e;
+  &:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+.coming-soon__ttl {
+  display: block;
+  font-size: 18px;
+  line-height: 1.2em;
+  margin-bottom: 0.5em;
+  color: #735410;
+}
+.coming-soon__body {
+  display: block;
+  padding-left: 1em;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+.coming-soon__body + .coming-soon__body {
+  margin-top: 18px;
+}
+.coming-soon__numb {
+  font-size: 28px;
+  font-weight: 700;
+}
+.coming-soon__texts {
+  font-size: 18px;
+  display: block;
+  margin: 2em auto;
+  line-height: 1.75em;
+}
+.coming-soon__date {
+  line-height: 1.75em;
+}
+.coming-soon__venue {
+  font-size: 14px;
+}
+.coming-soon__venue strong {
+  font-size: 20px;
+  margin-bottom: 0.5em;
+  display: inline-block;
+}
+/* max-width 640px, mobile-only styles, use when QAing mobile issues */
+@media only screen and (max-width: 40em) {
+  .coming-soon__ttl {
+    font-size: 14px;
+  }
+  .coming-soon__body {
+    padding-left: 0;
+  }
+  .coming-soon__numb {
+    font-size: 24px;
+  }
+  .coming-soon__date {
+    font-size: 16px;
+  }
+  .coming-soon__venue {
+    line-height: 1.4em;
+  }
+  .coming-soon__venue strong {
+    line-height: 1.25em;
+  }
+}
