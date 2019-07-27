@@ -31,6 +31,7 @@
 }
 /*スポンサー書き出し部分*/
 .wcorg-sponsors{
+  max-width: 780px !important;
   [class^="wcorg-sponsor-level-"]{
     margin-bottom: 60px;
     display: flex;
