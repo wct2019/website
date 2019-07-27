@@ -89,6 +89,20 @@
       }
     }
   }
+  .wcorg-sponsor-level-platinum{
+    h2{
+      color: #cab4a0;
+      &::before{
+        background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/platinum.png");
+      }
+      &::after{
+        background: #cab4a0;
+      }
+    }
+    .wcorg-sponsor{
+      width: 100%;
+    }
+  }
   .wcorg-sponsor-level-gold{
     h2{
       color: #ffb74a;
@@ -100,7 +114,7 @@
       }
     }
     .wcorg-sponsor{
-      width: 100%;
+      width: 50%;
     }
   }
   .wcorg-sponsor-level-silver{
@@ -114,7 +128,7 @@
       }
     }
     .wcorg-sponsor{
-      width: 50%;
+      width: 33.3%;
     }
   }
   .wcorg-sponsor-level-bronze{
@@ -157,6 +171,215 @@
     }
     .wcorg-sponsor{
       width: 25%;
+    }
+  }
+}
+
+
+/*ウィジェット用*/
+#colophon{
+  .widget-column{
+    .widget{
+      &.wcb_widget_sponsors{
+        max-width: 580px;
+        .widget-title{
+          text-align: center;
+          display: flex;
+          justify-content: center;;
+          align-items: center;
+          padding-left: 0;
+          font-size: 2.4rem;
+          width: 100%;
+          font-style: normal;
+          letter-spacing: normal;
+          padding: 0;
+          border-bottom: none;
+          margin-bottom: 80px;
+          &::before,
+          &::after{
+            content: "";
+            display: block;
+            height: 1px;
+            flex-grow: 1;
+            background: #cccccc;
+            width: auto;
+            position: inherit;
+            border-radius: 0;
+          }
+          &::before{
+            margin-right: 0.5em;
+          }
+          &::after{
+            margin-left: 0.5em;
+          }
+        }
+        .sponsor-level{
+          margin-bottom: 60px;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: flex-start;
+          .sponsor-level-title{
+            text-align: center;
+            padding: 0 0 10px 0;
+            font-size: 2rem;
+            position: inherit;
+            width: 100%;
+            margin: 0 0 30px 0;
+            display: block;
+            &::before{
+              content: "";
+              position: inherit;
+              display: block;
+              margin: 0 auto;
+              width: 60px;
+              height: 60px;
+              transform: none;
+              background-color: transparent;
+              background-size: 100% auto;
+              background-repeat: no-repeat;
+              background-position: center center;
+            }
+            &::after{
+              content: "";
+              display: block;
+              width: 120px;
+              height: 2px;
+              background: #cccccc;
+              margin: 10px auto 0 auto;
+            }
+          }
+          .sponsor-logo{
+            text-align: center;
+            flex: none;
+            &:hover{
+              border-color: transparent;
+              opacity: 0.6;
+            }
+            img{
+              width: 100%;
+              height: auto;
+              max-height: inherit;
+              max-width: 420px;
+            }
+          }
+          &.platinum{
+            .sponsor-level-title{
+              color: #cab4a0;
+              &::before{
+                background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/platinum.png");
+              }
+              &::after{
+                background: #cab4a0;
+              }
+            }
+            .sponsor-logo{
+              width: 100%;
+            }
+          }
+          &.gold{
+            .sponsor-level-title{
+              color: #ffb74a;
+              &::before{
+                background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/gold.png");
+              }
+              &::after{
+                background: #ffb74a;
+              }
+            }
+            .sponsor-logo{
+              width: 50%;
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 10px;
+                }
+              }
+            }
+          }
+          &.silver{
+            .sponsor-level-title{
+              color: #c4bfc4;
+              &::before{
+                background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/silver.png");
+              }
+              &::after{
+                background: #c4bfc4;
+              }
+            }
+            .sponsor-logo{
+              width: 33.3%;
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
+              }
+            }
+          }
+          &.bronze{
+            .sponsor-level-title{
+              color: #9e5318;
+              &::before{
+                background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/bronze.png");
+              }
+              &::after{
+                background: #9e5318;
+              }
+            }
+            .sponsor-logo{
+              width: 33.3%;
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
+              }
+            }
+          }
+          &.green{
+            .sponsor-level-title{
+              color: #69b74b;
+              &::before{
+                background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/green.png");
+              }
+              &::after{
+                background: #69b74b;
+              }
+            }
+            .sponsor-logo{
+              width: 25%;
+              img{
+                padding: 10px;
+              }
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
+              }
+            }
+          }
+          &.in-kind{
+            .sponsor-level-title{
+              color: #666666;
+              &::before{
+                background-image: url("https://2019.tokyo.wordcamp.org/files/2019/07/inkind.png");
+              }
+              &::after{
+                background: #666666;
+              }
+            }
+            .sponsor-logo{
+              width: 25%;
+              img{
+                padding: 10px;
+              }
+              @media only screen and (max-width: 480px) {
+                img{
+                  padding: 5px;
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
