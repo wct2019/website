@@ -1,0 +1,38 @@
+/* --------------------
+実行委員 設定
+-------------------- */
+.wcorg-organizers{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  .wcorg-organizer{
+    width: 20%;
+    box-sizing: border-box;
+    padding: 0 20px 20px 20px;
+    display: flex;
+    flex-flow: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    @include mq(sp){
+      width: 50%;
+      padding: 0 10px 20px 10px;
+    }
+    h2{
+      position: inherit;
+      font-size: 0.9rem;
+      font-weight: normal;
+      padding: 0;
+      margin: 10px 0 0 0;
+      &::before{
+        display: none;
+      }
+    }
+    .wcorg-organizer-description{
+      .avatar{
+        width: 50px;
+        height: auto;
+      }
+    }
+  }
+}
