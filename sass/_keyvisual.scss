@@ -9,7 +9,7 @@ body{
   /*全体ページ共通*/
   .site-header {
     padding: 90px 0 80px 0;
-    background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') repeat-x;
+    background: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_sp.jpg') repeat;
     background-size: auto 122%;
     position: relative;
     display: block;
@@ -153,7 +153,7 @@ body{
   }
 }
 
-@include mq(pc){
+@media only screen and (min-width: 768px) {
   body{
     .site-header {
       background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/keyvisual_bg.jpg');
