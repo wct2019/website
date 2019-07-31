@@ -108,6 +108,7 @@ body{
       @include mq(sp){
         padding-bottom: 50px;
         min-height: 50vh;
+        background-size: auto 400px;
       }
       .site-branding-container{
         width: 55vw;
