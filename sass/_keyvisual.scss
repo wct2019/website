@@ -102,7 +102,7 @@ body{
       justify-content: center;
       align-items: center;
       min-height: 90vh;
-      background-size: auto 100%;
+      background-size: auto 800px;
       animation: kvbgscroll 60s linear infinite;
       transform: translate3d(0,0,0);
       @include mq(sp){
