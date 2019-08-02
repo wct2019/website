@@ -1,0 +1,148 @@
+/* --------------------
+  チケット
+-------------------- */
+
+.entry-content{
+
+    .tix_tickets_table{
+        th{
+            background-color: $primary;
+            color: #fff;
+            @include mq(sp){
+                display: none;
+            }
+        }
+        tr{
+            &:first-child{
+                td{
+                    font-size: 0.9rem;
+                    border-color: #eee;
+                    background-color: #f6f6f6;
+                    border-width: 2px;
+                    padding: 10px;
+                    color: #333;
+                    @include mq(sp){
+                        text-align: right;
+                    }
+                }
+            }
+            td{
+                text-align: center;
+                border-top: none;
+                @include mq(sp){
+                    width: 100%;
+                    text-align: right;
+                    position: relative;
+                    &:nth-of-type(n + 2)::before{
+                        position: absolute;
+                        top: 50%;
+                        left: 10px;
+                        transform: translate( 0, -50% );
+                        font-weight: 600;
+                    }
+                    &:nth-of-type(2)::before{
+                        content: '価格';
+                    }
+                    &:nth-of-type(3)::before{
+                        content: '残数';
+                    }
+                    &:nth-of-type(4)::before{
+                        content: '数';
+                    }
+                    &:nth-child(odd){
+                        background-color: #fff;
+                    }
+                    &:nth-child(even){
+                        background-color: #f6f6f6;
+                    }
+                    &:first-child{
+                        background-color: $primary;
+                        color: #fff;
+                        text-align: center;
+                    }
+                }
+            }
+            @include mq(sp){
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+            }
+        }
+        //注文サマリー
+        &.tix-order-summary{
+            tr{
+                @include mq(sp){
+                    margin-bottom: 0;
+                    td{
+                        border-top: none;
+                    }
+                    td:nth-of-type(2)::before{
+                        content: 'チケットあたり';
+                    }
+                    td:nth-of-type(3)::before{
+                        content: '数';
+                    }
+                    td:nth-of-type(4)::before{
+                        content: '小計';
+                    }
+                    &.tix-row-total{
+                        td:first-of-type{
+                            height: 49px;
+                            &::before{
+                                content: '合計';
+                                font-weight: 600;
+                            }
+                        }
+                        td:nth-of-type(2){
+                            background-color: #fff;
+                            &::before{
+                                content: '';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //登録情報
+        &.tix-attendee-form{
+            @include mq(sp){
+                tr{
+                    margin-bottom: 0;
+                    th{
+                    display: block;
+                    width: 100%;
+                    }
+                    td{
+                        font-weight: 600;
+                        color: #333;
+                        background-color: #fff;
+                        border-top: none;
+                        // border-bottom: none;
+                        text-align: left;
+                        input{
+                            width: 100%;
+                        }
+                        &:first-of-type{
+                            background-color: #fff;
+                            border-bottom: none;
+                        }
+                        &:nth-of-type(2){
+                            &::before{
+                                content: '';
+                            }
+                        }
+                        &.tix-required{
+                            padding-bottom: 0;
+                        }
+                    }
+                    &:nth-of-type(odd){
+                        td{
+                            background-color: #f6f6f6;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
