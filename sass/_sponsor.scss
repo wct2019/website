@@ -31,7 +31,7 @@
 }
 /*スポンサー書き出し部分*/
 .wcorg-sponsors{
-  max-width: 780px !important;
+  max-width: 680px !important;
   [class^="wcorg-sponsor-level-"]{
     margin-bottom: 60px;
     display: flex;
@@ -101,6 +101,9 @@
     }
     .wcorg-sponsor{
       width: 100%;
+      img{
+        max-height: 100px;
+      }
     }
   }
   .wcorg-sponsor-level-gold{
@@ -378,6 +381,19 @@
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+/*スポンサー一覧ページ用*/
+body{
+  &.page-slug-sponsors{
+    #colophon{
+      .widget-area{
+        .wcb_widget_sponsors{
+          display: none !important;
         }
       }
     }
