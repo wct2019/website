@@ -69,6 +69,8 @@
     .menu-item {
       & > a {
         color: #ffffff !important;
+        display: flex;
+        align-items: center;
       }
     }
     & > li {
