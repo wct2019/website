@@ -399,3 +399,18 @@ body{
     }
   }
 }
+
+/*スポンサー個別ページ用*/
+body{
+  &.single-wcb_sponsor{
+    .entry-content{
+      img{
+        &.logo{
+          max-width: 100%;
+          max-height: 145px;
+          width: auto;
+        }
+      }
+    }
+  }
+}
