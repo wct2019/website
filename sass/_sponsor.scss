@@ -411,6 +411,15 @@ body{
           width: auto;
         }
       }
+      .wp-block-image{
+        &.logo{
+          img{
+            max-width: 100%;
+            max-height: 145px;
+            width: auto;
+          }
+        }
+      }
     }
   }
 }
