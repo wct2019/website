@@ -273,3 +273,146 @@ h2.wccsp-dates {
     }
   }
 }
+
+// ADD by mimi 2019/06/20
+// Fix centering
+@media only screen and (min-width: 1168px) {
+  .entry .entry-content .wp-block-image .aligncenter {
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-image .aligncenter {
+    margin: auto;
+  }
+  .entry .entry-content > *.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+// Button link Color
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
+  background-color: #edb62e;
+  color: $textcolor;
+  &:hover {
+    background-color: lighten(#edb62e,10%);
+  }
+}
+// navigation link
+.post-navigation .post-title {
+	color: $primary;
+}
+// wp-block-cover
+.image-filters-enabled{
+  .entry{
+    .post-thumbnail{
+      display: none;
+    }
+  }
+}
+
+// ADD by mukku 20190811
+// Pc size
+@media only screen and (min-width: 1168px) {
+  .post-navigation .nav-links {
+    max-width: 80%;
+    margin: 0 10%;
+    padding: 0 60px;
+  }
+  .post-navigation .nav-links .nav-previous {
+    padding-left: 5%;
+  }
+  .post-navigation .nav-links .nav-next {
+    text-align: right;
+  }
+}
+
+// Tablet horizontal size
+@media only screen and (min-width: 768px) and (max-width: 1167px){
+  .post-navigation {
+    max-width: 80%;
+    margin: calc(3 * 1rem) 10%;
+    padding: 0 60px;
+  }
+  .post-navigation .nav-links {
+    font-size : 1.0em;
+  }
+  .post-navigation .nav-links .nav-previous {
+    position: absolute;
+    max-width: 35%;
+  }
+  .post-navigation .nav-links .nav-next {
+    text-align: right;
+    margin-right: 10px;
+    margin-left: auto;
+    max-width: 35%;
+  }
+}
+
+// Tablet vertical size
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+  .post-navigation {
+    max-width: 80%;
+    margin: calc(3 * 1rem) 10%;
+  }
+  .post-navigation .nav-links {
+    font-size: 0.9em;
+    margin: 0;
+  }
+  .post-navigation .nav-links .nav-previous {
+    position: absolute;
+  }
+  .post-navigation .nav-links .nav-next {
+    text-align: right;
+    margin-right: 2px;
+    margin-top: 15%;
+  }
+}
+
+// Smartphone size
+@media only screen and (max-width: 480px) {
+  .post-navigation {
+    max-width: 80%;
+    margin: calc(3 * 1rem) 10%;
+  }
+  .post-navigation .nav-links {
+    font-size: 0.8em;
+    margin: 0;
+  }
+  .post-navigation .nav-links .nav-previous {
+    position: absolute;
+    max-width: 80%;
+  }
+  .post-navigation .nav-links .nav-next {
+    text-align: right;
+    margin-right: 2px;
+    margin-top: 20%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .entry .entry-footer {
+    max-width: 80%;
+    margin: 0 10%;
+    text-align: right;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .entry .entry-footer {
+    max-width: 90%;
+    margin: 0 10%;
+    text-align: right;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+}
+// Till here by mukku 20190811
