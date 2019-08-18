@@ -10,6 +10,7 @@
 @import "session"; //セッション一覧用設定
 @import "comingsoon"; //カミングスーン一覧用設定
 @import "tickets"; //チケット用設定
+@import "prevnext"; //投稿ページ遷移ナビゲーション設定
 /* ----
 for ティザーサイト
 add 2019/06/01 21:45
@@ -235,6 +236,43 @@ h2.wccsp-dates {
 // サイトロゴを表示しない
 .site-logo {
   display: none;
+}
+
+// ADD by mimi 2019/06/20
+// Fix centering
+@media only screen and (min-width: 1168px) {
+  .entry .entry-content .wp-block-image .aligncenter {
+    margin: auto;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .entry .entry-content .wp-block-image .aligncenter {
+    margin: auto;
+  }
+  .entry .entry-content > *.aligncenter {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+// Button link Color
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
+  background-color: #edb62e;
+  color: $textcolor;
+  &:hover {
+    background-color: lighten(#edb62e,10%);
+  }
+}
+// navigation link
+.post-navigation .post-title {
+	color: $primary;
+}
+// wp-block-cover
+.image-filters-enabled{
+  .entry{
+    .post-thumbnail{
+      display: none;
+    }
+  }
 }
 
 // ADD by mimi 2019/06/20
