@@ -70,11 +70,15 @@
     margin: 0;
   }
   .post-navigation .nav-links .nav-previous {
-    max-width: 80%;
+    max-width: auto;
   }
   .post-navigation .nav-links .nav-next {
     text-align: left;
     margin-right: 2px;
+  }
+  .post-navigation .nav-links .nav-next .meta-nav:after,
+  .post-navigation .nav-links .nav-previous .meta-nav:before{
+    display: none;
   }
 }
 
