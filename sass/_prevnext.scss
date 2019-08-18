@@ -68,13 +68,16 @@
   .post-navigation .nav-links {
     font-size: 0.8em;
     margin: 0;
+    flex-flow: column-reverse;
   }
   .post-navigation .nav-links .nav-previous {
     max-width: auto;
+    margin-bottom: 1rem;
   }
   .post-navigation .nav-links .nav-next {
     text-align: left;
     margin-right: 2px;
+    margin-bottom: 0;
   }
   .post-navigation .nav-links .nav-next .meta-nav:after,
   .post-navigation .nav-links .nav-previous .meta-nav:before{
