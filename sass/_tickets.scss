@@ -119,8 +119,19 @@
                         border-top: none;
                         // border-bottom: none;
                         text-align: left;
+                        label{
+                          display: inline-block;;
+                          margin-bottom: 1em;
+                          &:last-of-type{
+                            margin-bottom: 0;
+                          }
+                        }
                         input{
-                            width: 100%;
+                            &[type="text"],
+                            &[type="email"],
+                            &[type="url"]{
+                              width: 100%;
+                            }
                         }
                         &:first-of-type{
                             background-color: #fff;
