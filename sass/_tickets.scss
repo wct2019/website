@@ -68,6 +68,20 @@
                 margin-bottom: 10px;
             }
         }
+        th.tix-column-price {
+            min-width: 5em;
+        }
+        th.tix-column-remaining {
+            min-width: 4em;
+        }
+        tr.tix-row-coupon {
+            td:first-child {
+                @include mq(sp){
+                    background-color: #fff;
+                    border: 0;
+                }
+            }
+        } 
         //注文サマリー
         &.tix-order-summary{
             tr{
@@ -159,6 +173,17 @@
     .tix-js{
         input[type="submit"]:hover{
             background-color: #f1c65d;
+        }
+    }
+
+    table.tix-ticket-form {
+        th {
+            background-color: #289563;
+        color: #fff;
+        }
+        tr:first-child td {
+        background: #fff;
+        color: #333;
         }
     }
 
