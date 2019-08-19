@@ -127,7 +127,11 @@
                           }
                         }
                         input{
-                            //width: 100%;
+                            &[type="text"],
+                            &[type="email"],
+                            &[type="url"]{
+                              width: 100%;
+                            }
                         }
                         &:first-of-type{
                             background-color: #fff;
