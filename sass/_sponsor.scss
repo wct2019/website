@@ -178,6 +178,20 @@
   }
 }
 
+/*スポンサー個別ページ用*/
+.single-wcb_sponsor{
+  .site-content{
+    .site-main{
+      .entry{
+        .entry-header{
+          .entry-meta{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
 
 /*ウィジェット用*/
 #colophon{
