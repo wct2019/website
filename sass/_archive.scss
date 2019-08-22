@@ -1,0 +1,24 @@
+// ADD by mukku 20190821
+@media only screen and (min-width: 768px){
+  .archive .page-header {
+    margin: 90px calc(10% + 60px);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .archive .page-header {
+    margin: 90px calc(10% + 60px);
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  .archive .page-header .page-title {
+    font-size: 1em;
+  }
+}
+
+.archive .page-header .page-title .page-description {
+  color: #289563;
+}
