@@ -43,11 +43,13 @@
       }
       &.ticketLink{
         & > a{
-          display: inline;
+          display: inline-block;
           background: $secondary;
           color: #ffffff !important;
           border-radius: 5px;
           transition: all 0.3s ease;
+          line-height: 1;
+          height: 43px;
           &:hover{
             background: lighten($secondary, 10%);
           }
