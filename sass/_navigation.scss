@@ -19,6 +19,7 @@
     & > li {
       color: $primary;
       line-height: 1.6 !important;
+      display: inline-block;
       &.menu-item-has-children {
         line-height: 1.6;
         .submenu-expand{
@@ -37,6 +38,18 @@
           a, .submenu-expand{
             background: $primary;
             color: #fff !important;
+          }
+        }
+      }
+      &.ticketLink{
+        & > a{
+          display: inline;
+          background: $secondary;
+          color: #ffffff !important;
+          border-radius: 5px;
+          transition: all 0.3s ease;
+          &:hover{
+            background: lighten($secondary, 10%);
           }
         }
       }
