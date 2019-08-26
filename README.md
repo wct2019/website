@@ -67,3 +67,13 @@ sass/style.scss → docs/style.css にコンパイルされる。
 
 ## 生成される外部css  
 https://wct2019.github.io/website/style.css
+
+### その他メモ
+
+#### ローカルで登壇者の投稿タイプを編集するための追加ファイル
+
+登壇者を追加するときに、新規追加で保存すると画面エラーが出ます。  
+メールアドレスとユーザー名でプロフィール画像などを取得するための仕組みに必要なファイルを追加する必要があるので、[org](https://github.com/WordPress/wordcamp.org)のリポジトリよりDLしてmu-pluginsに追加します。
+
+ファイルのリンク
+https://github.com/WordPress/wordcamp.org/blob/a5dd6e6547c739a020083e7b9db9a603667e86d5/public_html/wp-content/mu-plugins/3-helpers-misc.php

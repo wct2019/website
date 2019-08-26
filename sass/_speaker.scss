@@ -1,0 +1,95 @@
+/* --------------------
+  登壇者
+-------------------- */
+.wcorg-speakers {
+  display: flex;
+  flex-wrap : wrap;
+  justify-content: flex-start;
+  .wcorg-speaker {
+    width: calc( 100% / 3 - 16px );
+    height: auto;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0 12px 24px;
+    min-height: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    &:nth-of-type(3n + 1){
+      margin-left: 0;
+    }
+    &:nth-of-type(3n + 3){
+      margin-right: 0;
+    }
+    &:last-of-type{
+      margin-bottom: 24px;
+    }
+    @include mq(sp){
+      width: 100%;
+      margin: 0 0 24px;
+    }
+    h2{
+      margin-top: 0.5em;
+      margin-bottom: 0.5em;
+      padding: 0;
+      padding-bottom: 0.5em;
+      font-size: 1.2rem;
+      width: 100%;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:before{
+        display: none;
+      }
+      &:after{
+        content: '';
+        width: 40%;
+        height: 2px;
+        border-bottom: 2px solid $primary;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate( -50%, 0 );
+      }
+    }
+    .wcorg-speaker-description {
+      position: relative;
+      padding-top: 10px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      .avatar {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto;
+        display: block;
+      }
+      p{
+        width: 100%;
+        margin-bottom: 0;
+        line-height: 1.5;
+        font-size: 1rem;
+        &:nth-of-type(n + 2){
+          margin-top: 0;
+        }
+      }
+  
+      .wcorg-speaker-info {
+        .wcorg-speaker-belonging {
+          margin: 0;
+        }
+        .wcorg-speaker-url {
+          margin: 0;
+        }
+      }
+  
+      .wcorg-speaker-comment {
+        width: 100%;
+      }
+    }
+  }
+}
