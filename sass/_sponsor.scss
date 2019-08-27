@@ -109,10 +109,16 @@
             max-width: 420px;
             max-height: inherit;
             padding: 20px;
+            @include mq(sp){
+              max-width: 100%;
+            }
           }
           &[href*="gmo-pepabo"]{
             img{
               max-width: 320px;
+              @include mq(sp){
+                max-width: 100%;
+              }
             }
           }
         }
