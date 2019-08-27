@@ -81,6 +81,7 @@
             height: auto;
             max-height: 80px;
             width: auto;
+            padding: 20px;
           }
           &:hover{
             opacity: 0.8;
@@ -101,11 +102,20 @@
     }
     .wcorg-sponsor{
       width: 100%;
-      img{
-        max-height: 100px;
-        max-width: 420px !important;
-        max-height: inherit !important;
-        padding: 20px;
+      .wcorg-sponsor-description{
+        a{
+          img{
+            max-height: 100px;
+            max-width: 420px;
+            max-height: inherit;
+            padding: 20px;
+          }
+          &[href*="gmo-pepabo"]{
+            img{
+              max-width: 320px;
+            }
+          }
+        }
       }
     }
   }
@@ -295,6 +305,14 @@
             }
             .sponsor-logo{
               width: 100%;
+              img{
+                max-width: 420px;
+              }
+              &[href*="gmo-pepabo"]{
+                img{
+
+                }
+              }
             }
           }
           &.gold{
