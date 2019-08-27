@@ -310,7 +310,7 @@
               }
               &[href*="gmo-pepabo"]{
                 img{
-
+                  max-width: 320px;
                 }
               }
             }
@@ -395,6 +395,7 @@
             }
           }
           &.in-kind{
+            justify-content: center;
             .sponsor-level-title{
               color: #666666;
               &::before{
