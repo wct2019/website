@@ -1,133 +1,128 @@
 /* --------------------
  グローバルメニュー
 -------------------- */
-.main-navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-height: 40px;
-  background-color: rgba(255, 255, 255, 0.95);
-  margin-top: 0;
-  z-index: 10;
-  border-bottom: 1px solid #eeeeee;
-}
-.menu-globalmenu-container > .main-menu {
-}
-.main-navigation {
-  .main-menu {
-    & > li {
-      color: $primary;
-      line-height: 1.6 !important;
-      display: inline-block;
-      &.menu-item-has-children {
-        line-height: 1.6;
-        .submenu-expand{
-          vertical-align: middle;
-          height: 53px;
-          box-sizing: border-box;
-          margin-top: -1px;
-          margin-right: 0 !important;
-          border-radius: 0;
-          &:hover{
-            background: $primary;
-            color: #fff;
-          }
-        }
-        &:hover{
-          a, .submenu-expand{
-            background: $primary;
-            color: #fff !important;
-          }
-        }
-      }
-      &.ticketLink{
-        & > a{
-          display: inline-block;
-          background: $secondary;
-          color: #ffffff !important;
-          border-radius: 5px;
-          transition: all 0.3s ease;
-          line-height: 1;
-          height: 43px;
-          &:hover{
-            background: lighten($secondary, 10%);
-          }
-        }
-      }
-    }
-  }
-  .menu-item {
-    & > a {
-      display: inline-block;
-      font-size: 0.9rem;
-      letter-spacing: 0.02em;
-      color: $primary !important;
-      padding: 15px;
-      height: 53px;
-      margin-right: 0 !important;
-      transition: all 0.3s ease;
-      &:hover {
-        background-color: $primary;
-        color: #fff !important;
-        @include mq(sp){
-          background-color: transparent;
-          color: $primary !important;
-        }
-      }
-    }
-  }
-}
-.main-navigation {
-  .sub-menu {
-    background: rgba($primary, 0.9);
-    .menu-item {
-      & > a {
-        color: #ffffff !important;
-        display: flex;
-        align-items: center;
-      }
-    }
-    & > li {
-      & > a {
-        &:not(.submenu-eexpand) {
-          &:hover {
-            background: rgba($secondary, 0.9);
-          }
-        }
-      }
-      .menu-item-link-return{
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 2;
-      }
-      &.mobile-parent-nav-menu-item{
-        svg{
-          top: 0.4rem;
-        }
-      }
-    }
-  }
-  .menu-item-has-children {
-    &.off-canvas {
-      .sub-menu {
-        background: rgba($primary, 0.9);
-        & > li {
-          color: #ffffff;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-          & > a {
-            color: #ffffff !important;
-          }
-        }
-      }
-    }
-  }
-}
-@include mq(sp){
+.site-header{
   .main-navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 40px;
+    background-color: rgba(255, 255, 255, 0.95);
+    margin-top: 0;
+    z-index: 10;
+    border-bottom: 1px solid #eeeeee;
+    .main-menu {
+      & > li {
+        color: $primary;
+        line-height: 1.6 !important;
+        display: inline-block;
+        &.menu-item-has-children {
+          line-height: 1.6;
+          .submenu-expand{
+            vertical-align: middle;
+            height: 53px;
+            box-sizing: border-box;
+            margin-top: -1px;
+            margin-right: 0 !important;
+            border-radius: 0;
+            &:hover{
+              background: $primary;
+              color: #fff;
+            }
+          }
+          &:hover{
+            a, .submenu-expand{
+              background: $primary;
+              color: #fff !important;
+            }
+          }
+          &.off-canvas {
+            .sub-menu {
+              background: rgba($primary, 0.9);
+              & > li {
+                color: #ffffff;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+                & > a {
+                  color: #ffffff !important;
+                }
+              }
+            }
+          }
+        }
+        &.ticketLink{
+          & > a{
+            display: inline-block;
+            background: $secondary;
+            color: #ffffff !important;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            line-height: 1;
+            height: 43px;
+            &:hover{
+              background: lighten($secondary, 10%);
+            }
+          }
+        }
+      }
+    }
     .menu-item {
       & > a {
-        padding: 15px 0 15px 1em;
+        display: inline-block;
+        font-size: 0.9rem;
+        letter-spacing: 0.02em;
+        color: $primary !important;
+        padding: 15px;
+        height: 53px;
+        margin-right: 0 !important;
+        transition: all 0.3s ease;
+        @include mq(sp){
+          padding: 15px 0 15px 1em;
+        }
+        &:hover {
+          background-color: $primary;
+          color: #fff !important;
+          @include mq(sp){
+            background-color: transparent;
+            color: $primary !important;
+          }
+        }
+      }
+    }
+    .sub-menu {
+      background: rgba($primary, 0.9);
+      .menu-item {
+        & > a {
+          color: #ffffff !important;
+          display: flex;
+          align-items: center;
+        }
+      }
+      & > li {
+        & > a {
+          &:not(.submenu-eexpand) {
+            &:hover {
+              background: rgba($secondary, 0.9);
+            }
+          }
+        }
+        .menu-item-link-return{
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 2;
+        }
+        &.mobile-parent-nav-menu-item{
+          svg{
+            top: 0.4rem;
+          }
+        }
+      }
+    }
+  }
+  &.featured-image{
+    .main-navigation{
+      li{
+        color: $primary;
       }
     }
   }
