@@ -117,15 +117,6 @@
               padding: 20px;
             }
           }
-          &[href*="gmo-pepabo"]{
-            img{
-              max-width: 320px;
-              @include mq(sp){
-                max-width: 100%;
-                padding: 20px;
-              }
-            }
-          }
         }
       }
     }
@@ -326,11 +317,6 @@
               width: 100%;
               img{
                 max-width: 420px;
-              }
-              &[href*="gmo-pepabo"]{
-                img{
-                  max-width: 320px;
-                }
               }
             }
           }
