@@ -119,4 +119,11 @@
       }
     }
   }
+  &.featured-image{
+    .main-navigation{
+      li{
+        color: $primary;
+      }
+    }
+  }
 }
