@@ -114,7 +114,7 @@ body {
     &::before{
       position: inherit;
       display: block;
-      margin: 0 auto 0.5em auto; 
+      margin: 0 auto 0.5em auto;
     }
   }
 }
@@ -201,15 +201,19 @@ body {
 }
 
 //メディアキット
-.wp-block-columns{
-  .asset-navigation{
-    .wp-block-button{
-      .wp-block-button__link{
-        width: 100%;
-        border-radius: 30px;
-        &:hover{
-          border-color: $secondary;
-          color: $textcolor;
+.entry{
+  .entry-content{
+    .wp-block-columns{
+      .asset-navigation{
+        .wp-block-button{
+          .wp-block-button__link{
+            width: 100%;
+            border-radius: 30px;
+            &:hover{
+              border-color: $secondary;
+              color: $textcolor;
+            }
+          }
         }
       }
     }
