@@ -204,7 +204,7 @@ body {
 .entry{
   .entry-content{
     .wp-block-columns{
-      .asset-navigation{
+      &.asset-navigation{
         .wp-block-button{
           .wp-block-button__link{
             width: 100%;
