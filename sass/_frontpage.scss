@@ -137,6 +137,18 @@ body{
         margin-top: 0.5em;
         display: block;
       }
+      &.afterparty-title{
+        &::before{
+          display: block;
+          content: "";
+          width: 45px;
+          height: 45px;
+          background: url('https://2019.tokyo.wordcamp.org/files/2019/09/front-icon-afterparty.png') no-repeat;
+          background-position: center;
+          background-size: 100% auto;
+          margin: 0 auto 20px auto;
+        }
+      }
     }
     .front-day-item-info{
       display: flex;
@@ -196,6 +208,25 @@ body{
     }
     .wp-block-separator{
       background-color: $ltgray;
+    }
+  }
+}
+//access
+h2{
+  &.front-access-heading{
+    padding-top: 100px;
+    text-align: center;
+    position: inherit;
+    margin-bottom: 70px;
+    &::before{
+      position: inherit;
+      content: "";
+      width: 60px;
+      height: 60px;
+      margin: 0 auto 20px auto;
+      background: url('https://2019.tokyo.wordcamp.org/files/2019/09/front-icon-access.png') no-repeat;
+      background-position: center;
+      background-size: 100% auto;
     }
   }
 }
