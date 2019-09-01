@@ -100,6 +100,31 @@ body{
       text-align: center;
       font-weight: bold;
       font-size: 1.2rem;
+      color: $primary;
+      &::before{
+        content: "";
+        display: block;
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 20px auto;
+        background-position: center;
+        background-size: 100% auto;
+        background-repeat: no-repeat;
+      }
+    }
+    &.contributor-day{
+      .front-day-item-date{
+        &::before{
+          background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/front-icon-contributorday.png');
+        }
+      }
+    }
+    &.session-day{
+      .front-day-item-date{
+        &::before{
+          background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/front-icon-sessionday.png');
+        }
+      }
     }
     h3{
       text-align: center;
@@ -124,9 +149,45 @@ body{
         }
       }
     }
+    .wp-block-columns{
+      &.front-btn-nav{
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        .wp-block-column{
+          .wp-block-button__link{
+            width: 100%;
+          }
+        }
+        &.session-cont-nav{
+          .wp-block-column{
+            .wp-block-button__link{
+              &:hover{
+                border-color: $secondary;
+                color: #ffffff !important;
+              }
+            }
+          }
+        }
+        &.support-cont-nav{
+          .wp-block-column{
+            .wp-block-button__link{
+              &:hover{
+                border-color: $primary;
+                background: $primary;
+                color: #ffffff !important;
+              }
+            }
+          }
+        }
+      }
+    }
     & > p{
       width: 80%;
       margin: 0 auto 2em auto;
+    }
+    h4{
+      border: none;
     }
   }
 }
