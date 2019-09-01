@@ -113,5 +113,16 @@ body{
         display: block;
       }
     }
+    .front-day-item-info{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li{
+        list-style: none;
+        &:first-child{
+          margin-right: 2em;
+        }
+      }
+    }
   }
 }
