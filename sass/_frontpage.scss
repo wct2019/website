@@ -93,7 +93,7 @@ body{
   }
   .front-about-day-item{
     background: #ffffff;
-    padding: 20px;
+    padding: 40px 20px;
     margin-top: 40px;
     border-radius: 16px;
     .front-day-item-date{
@@ -123,6 +123,10 @@ body{
           margin-right: 2em;
         }
       }
+    }
+    & > p{
+      width: 80%;
+      margin: 0 auto 2em auto;
     }
   }
 }
