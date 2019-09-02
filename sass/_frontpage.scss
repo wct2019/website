@@ -255,6 +255,8 @@ h2{
             justify-content: flex-start;
             align-items: center;
             border-bottom: none;
+            color: $textcolor;
+            transition: all 0.3s ease;
             &::before{
               content: "";
               width: 20vw;
@@ -262,10 +264,10 @@ h2{
               background-repeat: no-repeat;
               background-size: 100% auto;
               background-position: center;
-              border: 1px solid #ccc;
               border-radius: 50%;
               overflow: hidden;
               margin-bottom: 1em;
+              transition: all 0.3s ease;
               @include mq(pc){
                 width: 13vw;
                 height: 13vw;
@@ -273,6 +275,40 @@ h2{
               @include mq(sp){
                 width: 40vw;
                 height: 40vw;
+              }
+            }
+            &:hover{
+              color: $secondary;
+              &::before{
+                opacity: 0.8;
+              }
+            }
+          }
+          &.to-contributorday{
+            a{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/contributor.jpg');
+              }
+            }
+          }
+          &.to-timetable{
+            a{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/timetable.jpg');
+              }
+            }
+          }
+          &.to-tickets{
+            a{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/ticket.jpg');
+              }
+            }
+          }
+          &.to-access{
+            a{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/access.jpg');
               }
             }
           }
