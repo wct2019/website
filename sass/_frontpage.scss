@@ -230,3 +230,11 @@ h2{
     }
   }
 }
+.entry{
+  .entry-content{
+    iframe[src^="https://www.google.com/maps/embed"]{
+      width: 100%;
+      max-width: 100% !important;
+    }
+  }
+}
