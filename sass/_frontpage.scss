@@ -217,7 +217,7 @@ h2{
     padding-top: 100px;
     text-align: center;
     position: inherit;
-    margin-bottom: 70px;
+    margin-bottom: 70px !important;
     &::before{
       position: inherit;
       content: "";
