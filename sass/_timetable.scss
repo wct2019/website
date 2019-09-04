@@ -11,6 +11,13 @@ $track2: #edde7e;
 $track3: #acdfec;
 $track4: #fcdcea;
 
+$room_ab: #4DAE81;
+$room_cd: #5B9EB7;
+$room_ef: #F39E5F;
+$room_gh: #E16E7F;
+$room_k: #A180A2;
+$room_other: #717071;
+
 /*タイムテーブル
 ----------------------*/
 .entry-content{
@@ -45,48 +52,47 @@ $track4: #fcdcea;
               &::before{
                 content: "";
                 display: block;
-                width: 25px;
                 height: 25px;
                 background-repeat: no-repeat;
-                background-size: 100% auto;
+                background-size: auto 100%;
                 background-position: center;
                 margin: 0 auto;
               }
             }
           }
           &:nth-of-type(2){
-            background: $track1;
-            color: darken($track1,65%);
+            background: lighten($room_ab,35%);
+            color: darken($room_ab,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track1.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png');
               }
             }
           }
           &:nth-of-type(3){
-            background: $track2;
-            color: darken($track2,55%);
+            background: lighten($room_cd,35%);
+            color: darken($room_cd,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track2.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png');
               }
             }
           }
           &:nth-of-type(4){
-            background: $track3;
-            color: darken($track3,65%);
+            background: lighten($room_gh,30%);
+            color: darken($room_gh,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track3.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png');
               }
             }
           }
           &:nth-of-type(5){
-            background: $track4;
-            color: darken($track4,80%);
+            background: lighten($room_k,35%);
+            color: darken($room_k,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track4.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png');
               }
             }
           }
