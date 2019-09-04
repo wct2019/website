@@ -460,7 +460,9 @@ body{
             width: auto;
           }
           &.l-size{
-            max-height: 280px;
+            img{
+              max-height: 280px;
+            }
           }
         }
       }
