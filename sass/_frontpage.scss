@@ -96,6 +96,9 @@ body{
     padding: 40px 20px;
     margin-top: 40px;
     border-radius: 16px;
+    @include mq(sp){
+      padding-bottom: 20px;
+    }
     .front-day-item-date{
       text-align: center;
       font-weight: bold;
@@ -154,10 +157,18 @@ body{
       li{
         list-style: none;
         text-align: center;
+        @include mq(sp){
+          font-size: 1rem;
+        }
         em{
           font-size: 0.8em;
           font-style: normal;
           margin-left: 0.3em;
+          @include mq(sp){
+            display: block;
+            margin-left: 0;
+            margin-bottom: 0.5em;
+          }
         }
       }
     }
@@ -166,6 +177,9 @@ body{
         max-width: 80%;
         margin-left: auto;
         margin-right: auto;
+        @include mq(sp){
+          max-width: 100%;
+        }
         .wp-block-column{
           .wp-block-button__link{
             width: 100%;
@@ -197,6 +211,9 @@ body{
     & > p{
       width: 80%;
       margin: 0 auto 2em auto;
+      @include mq(sp){
+        width: auto;
+      }
     }
     h4{
       border: none;
@@ -205,6 +222,9 @@ body{
       max-width: 80%;
       margin-left: auto;
       margin-right: auto;
+      @include mq(sp){
+        max-width: 100%;
+      }
     }
     .wp-block-separator{
       background-color: $ltgray;
