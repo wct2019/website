@@ -151,13 +151,13 @@ body{
       }
     }
     .front-day-item-info{
-      display: flex;
-      justify-content: center;
-      align-items: center;
       li{
         list-style: none;
-        &:first-child{
-          margin-right: 2em;
+        text-align: center;
+        em{
+          font-size: 0.8em;
+          font-style: normal;
+          margin-left: 0.3em;
         }
       }
     }
