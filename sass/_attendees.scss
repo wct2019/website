@@ -1,0 +1,34 @@
+#tix-attendees{
+    @include mq(sp){
+        max-width: 100%;
+    }
+    ul{
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      padding-left: 0;
+      @include mq(sp){
+        display: block;
+      }
+      &::after{
+        content: "";
+        display: block;
+        width: calc(33.333% - 10px);
+      }
+      &.tix-columns-3{
+          li{
+            width: calc(33.333% - 10px);
+            float: none;
+            height: auto;
+              @include mq(sp){
+                  width: 100%;
+                  padding-bottom: 10px;
+                  border-bottom: 1px solid $ltgray;
+              }
+              a{
+                border-bottom: none;
+              }
+          }
+      }
+    }
+}
