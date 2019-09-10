@@ -7,6 +7,9 @@
             @include mq(sp){
                 width: 50%;
             }
+            a{
+              border-bottom: none;
+            }
         }
     }
 }
