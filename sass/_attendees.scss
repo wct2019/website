@@ -1,0 +1,12 @@
+#tix-attendees{
+    @include mq(sp){
+        max-width: 100%;
+    }
+    .tix-attendee-list.tix-columns-3{
+        li{
+            @include mq(sp){
+                width: 50%;
+            }
+        }
+    }
+}
