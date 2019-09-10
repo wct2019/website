@@ -27,14 +27,17 @@
               height: 0;
               clear: both;
             }
-              @include mq(sp){
-                  width: 100%;
-                  padding-bottom: 10px;
-                  border-bottom: 1px solid $ltgray;
-              }
-              a{
-                border-bottom: none;
-              }
+            @include mq(sp){
+                width: 100%;
+                padding-bottom: 10px;
+                border-bottom: 1px solid $ltgray;
+            }
+            .tix-field{
+              overflow-wrap: break-word;
+            }
+            a{
+              border-bottom: none;
+            }
           }
       }
     }
