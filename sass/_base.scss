@@ -183,6 +183,39 @@ body {
         }
       }
     }
+    &.sp-column-table{
+      tbody{
+        tr{
+          &:first-of-type{
+            @include mq(sp){
+              display: none;
+            }
+          }
+          &:nth-child(odd){
+            td{
+              @include mq(sp){
+                background: transparent;
+                &:first-child{
+                  background: $primary;
+                  color: #fff;
+                }
+              }
+            }
+          }
+          th,td{
+            @include mq(sp){
+              display: block;
+              width: 100%;
+              border-width: 1px;
+              &:first-child{
+                background: $primary;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   .wp-block-cover {
     h2 {
