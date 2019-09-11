@@ -5,17 +5,17 @@
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  align-items: flex-start;
   .wcorg-organizer{
-    width: 33.333%;
+    width: 50%;
     box-sizing: border-box;
     padding: 0 20px 20px 20px;
-    border-right: 1px solid $ltgray;
+    margin-bottom: 20px;
+    border-right: 1px dotted $ltgray;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    &:nth-child(3n){
+    &:nth-child(2n){
       border-right: none;
     }
     @include mq(sp){
@@ -25,7 +25,7 @@
     h2{
       position: inherit;
       font-size: 1.1rem;
-      font-weight: normal;
+      font-weight: bold;
       padding: 0;
       margin: 10px 0 0 0;
       &::before{
@@ -38,8 +38,9 @@
       justify-content: flex-start;
       align-items: center;
       font-size: 0.9rem;
+      margin-top: 1rem;
       .avatar{
-        width: 50px;
+        width: 65px;
         height: auto;
       }
     }
