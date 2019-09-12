@@ -117,6 +117,44 @@ body {
       margin: 0 auto 0.5em auto;
     }
   }
+  &.timetable-title{
+    position: inherit;
+    text-align: center;
+    padding-left: 0;
+    @include mq(sp){
+      max-width: 100%;
+    }
+    &::before{
+      content: "";
+      display: block;
+      position: inherit;
+      width: 280px;
+      height: 50px;
+      border-radius: 0;
+      transform: none;
+      top: inherit;
+      left: inherit;
+      margin: 0 auto 1rem auto;
+      background-color: transparent;
+      background-image: url(https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png),
+                        url(https://2019.tokyo.wordcamp.org/files/2019/09/clover.png),
+                        url(https://2019.tokyo.wordcamp.org/files/2019/09/sun.png),
+                        url(https://2019.tokyo.wordcamp.org/files/2019/09/heart.png),
+                        url(https://2019.tokyo.wordcamp.org/files/2019/09/spade.png);
+      background-position: 0 0,
+                           50px 0,
+                           110px 0,
+                           170px 0,
+                           230px 0;
+      background-size: auto 50px;
+      background-repeat: no-repeat;
+    }
+    span{
+      display: block;
+      font-size: 0.9rem;
+      margin-top: 0.5em !important;
+    }
+  }
 }
 .entry-content h3 {
   font-size: 1.3rem;
@@ -125,6 +163,30 @@ body {
     color: $primary;
     margin-right: 0.3em;
     line-height: 1.8;
+  }
+  &.starroom-heading{
+    text-align: center;
+    &::before{
+      content: "";
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 0 auto 1rem auto;
+      background: url(https://2019.tokyo.wordcamp.org/files/2019/09/star.png) no-repeat;
+      background-size: 100% auto;
+      background-position: center;
+    }
+    span{
+      display: block;
+      font-size: 0.9rem;
+      margin-top: 0.5em !important;
+    }
+  }
+  &.date-heading{
+    text-align: center;
+    &::before{
+      display: none;
+    }
   }
 }
 .entry-content h4 {
