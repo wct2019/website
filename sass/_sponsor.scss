@@ -299,6 +299,7 @@
             @include mq(sp){
               padding: 10px !important;
               min-height: 120px;
+              margin-bottom: 10px;
             }
             &:hover{
               border-color: transparent;
@@ -342,6 +343,9 @@
             }
             .sponsor-logo{
               width: calc(50% - 10px);
+              @include mq(sp){
+                width: calc(50% - 5px);
+              }
               img{
                 @include mq(sp){
                   padding: 0;
@@ -361,6 +365,9 @@
             }
             .sponsor-logo{
               width: calc(33.3% - 10px);
+              @include mq(sp){
+                width: calc(33.3% - 5px);
+              }
               img{
                 @include mq(sp){
                   padding: 0;
@@ -380,6 +387,9 @@
             }
             .sponsor-logo{
               width: calc(33.3% - 10px);
+              @include mq(sp){
+                width: calc(33.3% - 5px);
+              }
               img{
                 @include mq(sp){
                   padding: 0;
@@ -399,6 +409,9 @@
             }
             .sponsor-logo{
               width: calc(25% - 10px);
+              @include mq(sp){
+                width: calc(33.3% - 5px);
+              }
               img{
                 padding: 10px;
               }
