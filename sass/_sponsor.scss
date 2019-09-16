@@ -221,7 +221,6 @@
   .widget-column{
     .widget{
       &.wcb_widget_sponsors{
-        max-width: 580px;
         .widget-title{
           text-align: center;
           display: flex;
@@ -257,8 +256,7 @@
           margin-bottom: 60px;
           display: flex;
           flex-wrap: wrap;
-          align-items: center;
-          justify-content: flex-start;
+          justify-content: space-between;
           .sponsor-level-title{
             text-align: center;
             padding: 0 0 10px 0;
@@ -292,6 +290,16 @@
           .sponsor-logo{
             text-align: center;
             flex: none;
+            border: 1px solid #eeeeee;
+            background: #f6f6f6;
+            margin-bottom: 20px;
+            padding: 20px 40px !important;
+            min-height: 200px;
+            box-sizing: border-box;
+            @include mq(sp){
+              padding: 10px !important;
+              min-height: 120px;
+            }
             &:hover{
               border-color: transparent;
               opacity: 0.6;
@@ -315,6 +323,8 @@
             }
             .sponsor-logo{
               width: 100%;
+              max-width: 680px;
+              margin: 0 auto 20px auto;
               img{
                 max-width: 420px;
               }
@@ -331,10 +341,10 @@
               }
             }
             .sponsor-logo{
-              width: 50%;
-              @media only screen and (max-width: 480px) {
-                img{
-                  padding: 10px;
+              width: calc(50% - 10px);
+              img{
+                @include mq(sp){
+                  padding: 0;
                 }
               }
             }
@@ -350,10 +360,10 @@
               }
             }
             .sponsor-logo{
-              width: 33.3%;
-              @media only screen and (max-width: 480px) {
-                img{
-                  padding: 5px;
+              width: calc(33.3% - 10px);
+              img{
+                @include mq(sp){
+                  padding: 0;
                 }
               }
             }
@@ -369,10 +379,10 @@
               }
             }
             .sponsor-logo{
-              width: 33.3%;
-              @media only screen and (max-width: 480px) {
-                img{
-                  padding: 5px;
+              width: calc(33.3% - 10px);
+              img{
+                @include mq(sp){
+                  padding: 0;
                 }
               }
             }
@@ -388,13 +398,13 @@
               }
             }
             .sponsor-logo{
-              width: 25%;
+              width: calc(25% - 10px);
               img{
                 padding: 10px;
               }
-              @media only screen and (max-width: 480px) {
-                img{
-                  padding: 5px;
+              img{
+                @include mq(sp){
+                  padding: 0;
                 }
               }
             }
@@ -411,13 +421,14 @@
               }
             }
             .sponsor-logo{
-              width: 25%;
+              width: calc(25% - 10px);
+              @include mq(sp){
+                min-height: auto;
+              }
               img{
                 padding: 10px;
-              }
-              @media only screen and (max-width: 480px) {
-                img{
-                  padding: 5px;
+                @include mq(sp){
+                  padding: 0;
                 }
               }
             }
