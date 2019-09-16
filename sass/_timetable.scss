@@ -63,19 +63,20 @@ $room_other: #717071;
             .wcpt-track-name{
               display: flex;
               flex-flow: column;
-              font-size: 0.8rem;
+              font-size: 0.9rem;
               &::before{
                 content: "";
                 display: block;
-                height: 40px;
-                padding-top: 20px;
+                height: 20px;
                 width: 100%;
-                text-align: center;
-                font-size: 1rem;
                 background-repeat: no-repeat;
-                background-size: auto 20px;
-                background-position: center top;
-                margin: 5px auto;
+                background-size: auto 100%;
+                background-position: center;
+                margin: 5px auto 0;
+              }
+              &::after{
+                display: block;
+                font-size: 0.8rem;
               }
             }
           }
@@ -84,8 +85,10 @@ $room_other: #717071;
             color: darken($room_ab,20%);
             .wcpt-track-name{
               &::before{
-                content: "- Diamond -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png');
+              }
+              &::after{
+                content: "(Room AB)";
               }
             }
           }
@@ -94,8 +97,10 @@ $room_other: #717071;
             color: darken($room_cd,20%);
             .wcpt-track-name{
               &::before{
-                content: "- Clover -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png');
+              }
+              &::after{
+                content: "(Room CD)";
               }
             }
           }
@@ -104,8 +109,10 @@ $room_other: #717071;
             color: darken($room_ef,20%);
             .wcpt-track-name{
               &::before{
-                content: "- Sun -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png');
+              }
+              &::after{
+                content: "(Room EF)";
               }
             }
           }
@@ -114,8 +121,10 @@ $room_other: #717071;
             color: darken($room_gh,20%);
             .wcpt-track-name{
               &::before{
-                content: "- Heart -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png');
+              }
+              &::after{
+                content: "(Room GH)";
               }
             }
           }
@@ -124,8 +133,10 @@ $room_other: #717071;
             color: darken($room_k,20%);
             .wcpt-track-name{
               &::before{
-                content: "- Spade -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png');
+              }
+              &::after{
+                content: "(Room K)";
               }
             }
           }
@@ -190,15 +201,16 @@ $room_other: #717071;
             }
             a.fav-session-button{
               border: none;
+              color: #e8e8e8 !important;
               &:hover{
-                color: $favbtnhovercolor;
+                color: #e8e8e8 !important;
               }
             }
           }
           &.wcb-favourite-session{
             div.wcb-session-favourite-icon{
               a.fav-session-button{
-                color: $favbtnhovercolor;
+                color: $favbtnhovercolor !important;
               }
             }
           }
@@ -304,29 +316,34 @@ $room_other: #717071;
 ----------------------*/
 @media screen and (max-width: 700px){
   .mobile-session-diamond{
-    background: lighten($room_ab, 40%) url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png') right .5em center/auto 50% no-repeat;
+    background: lighten($room_ab, 40%) url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png') left .5em center/auto 50% no-repeat;
     color: darken($room_ab,20%);
     border-radius: 3px;
+    padding-left: 2em;
   }
   .mobile-session-clover{
-    background: lighten($room_cd, 35%) url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png') right .5em center/auto 50% no-repeat;
+    background: lighten($room_cd, 35%) url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png') left .5em center/auto 50% no-repeat;
     color: darken($room_cd,20%);
     border-radius: 3px;
+    padding-left: 2em;
   }
   .mobile-session-sun{
-    background: lighten($room_ef, 30%) url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png') right .5em center/auto 50% no-repeat;
+    background: lighten($room_ef, 30%) url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png') left .5em center/auto 50% no-repeat;
     color: darken($room_ef,20%);
     border-radius: 3px;
+    padding-left: 2em !important;
   }
   .mobile-session-heart{
-    background: lighten($room_gh, 30%) url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png') right .5em center/auto 50% no-repeat;
+    background: lighten($room_gh, 30%) url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png') left .5em center/auto 50% no-repeat;
     color: darken($room_gh,20%);
     border-radius: 3px;
+    padding-left: 2em;
   }
   .mobile-session-spade{
-    background: lighten($room_k, 35%) url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png') right .5em center/auto 50% no-repeat;
+    background: lighten($room_k, 35%) url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png') left .5em center/auto 50% no-repeat;
     color: darken($room_k,20%);
     border-radius: 3px;
+    padding-left: 2em;
   }
   .entry-content{
     .wcpt-schedule{
@@ -364,10 +381,34 @@ $room_other: #717071;
                 font-size: 0.9rem;
                 padding: 8px 10px;
                 font-weight: bold;
-                content: attr( data-track-title )!important;
                 width: 100% !important;
                 float: none !important;
                 height: auto !important;
+              }
+              &[data-track-title="Diamond"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room AB)'!important;
+                }
+              }
+              &[data-track-title="Clover"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room CD)'!important;
+                }
+              }
+              &[data-track-title="Sun"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room EF)'!important;
+                }
+              }
+              &[data-track-title="Heart"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room GH)'!important;
+                }
+              }
+              &[data-track-title="Spade"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room K)'!important;
+                }
               }
               .wcb-session-cell-content{
                 .wcpt-session-speakers{
