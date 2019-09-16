@@ -31,13 +31,12 @@
 }
 /*スポンサー書き出し部分*/
 .wcorg-sponsors{
-  max-width: 680px !important;
   [class^="wcorg-sponsor-level-"]{
     margin-bottom: 60px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     h2{
       text-align: center;
       padding: 0 0 10px 0;
@@ -69,10 +68,30 @@
     }
     .wcorg-sponsor{
       text-align: center;
+      flex: none;
+      border: 1px solid #eeeeee;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 40px !important;
+      min-height: 200px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+      @include mq(sp){
+        padding: 10px !important;
+        min-height: 120px;
+        margin-bottom: 10px;
+      }
+      &:hover{
+        border-color: transparent;
+        opacity: 0.8;
+        box-shadow: 0 0 10px #cccccc;
+      }
       .wcorg-sponsor-description{
         display: block;
-        margin: 0 auto 1em auto;
-        width: 90%;
+        margin: 0 auto;
         a{
           border: none;
           transition: all 0.2s ease;
@@ -105,6 +124,8 @@
     }
     .wcorg-sponsor{
       width: 100%;
+      max-width: 680px;
+      margin: 0 auto 20px auto;
       .wcorg-sponsor-description{
         a{
           img{
@@ -132,7 +153,10 @@
       }
     }
     .wcorg-sponsor{
-      width: 50%;
+      width: calc(50% - 10px);
+      @include mq(sp){
+        width: calc(50% - 5px);
+      }
       a{
         img{
           @include mq(sp){
@@ -291,11 +315,12 @@
             text-align: center;
             flex: none;
             border: 1px solid #eeeeee;
-            background: #f6f6f6;
+            border-radius: 10px;
             margin-bottom: 20px;
             padding: 20px 40px !important;
             min-height: 200px;
             box-sizing: border-box;
+            transition: all 0.3s ease;
             @include mq(sp){
               padding: 10px !important;
               min-height: 120px;
@@ -303,7 +328,8 @@
             }
             &:hover{
               border-color: transparent;
-              opacity: 0.6;
+              opacity: 0.8;
+              box-shadow: 0 0 10px #cccccc;
             }
             img{
               width: 100%;
