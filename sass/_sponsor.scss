@@ -436,6 +436,9 @@
             .sponsor-logo{
               width: calc(25% - 10px);
               @include mq(sp){
+                width: calc(33.3% - 5px);
+              }
+              @include mq(sp){
                 min-height: auto;
               }
               img{
