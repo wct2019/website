@@ -298,6 +298,11 @@ body {
 //メディアキット
 .entry{
   .entry-content{
+    @media screen and (max-width: 768px){
+      max-width: 100%;
+      margin: 0 20px;
+      padding: 0;
+    }
     .wp-block-columns{
       &.asset-navigation{
         .wp-block-button{
