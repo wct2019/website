@@ -61,14 +61,21 @@ $room_other: #717071;
           }
           &:nth-last-of-type(-n+5){
             .wcpt-track-name{
+              display: flex;
+              flex-flow: column;
+              font-size: 0.8rem;
               &::before{
                 content: "";
                 display: block;
-                height: 20px;
+                height: 40px;
+                padding-top: 20px;
+                width: 100%;
+                text-align: center;
+                font-size: 1rem;
                 background-repeat: no-repeat;
-                background-size: auto 100%;
-                background-position: center;
-                margin: 5px auto 0;
+                background-size: auto 20px;
+                background-position: center top;
+                margin: 5px auto;
               }
             }
           }
@@ -77,6 +84,7 @@ $room_other: #717071;
             color: darken($room_ab,20%);
             .wcpt-track-name{
               &::before{
+                content: "- Diamond -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png');
               }
             }
@@ -86,6 +94,7 @@ $room_other: #717071;
             color: darken($room_cd,20%);
             .wcpt-track-name{
               &::before{
+                content: "- Clover -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png');
               }
             }
@@ -95,6 +104,7 @@ $room_other: #717071;
             color: darken($room_ef,20%);
             .wcpt-track-name{
               &::before{
+                content: "- Sun -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png');
               }
             }
@@ -104,6 +114,7 @@ $room_other: #717071;
             color: darken($room_gh,20%);
             .wcpt-track-name{
               &::before{
+                content: "- Heart -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png');
               }
             }
@@ -113,6 +124,7 @@ $room_other: #717071;
             color: darken($room_k,20%);
             .wcpt-track-name{
               &::before{
+                content: "- Spade -";
                 background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png');
               }
             }
@@ -240,10 +252,22 @@ $room_other: #717071;
           .wcpt-session-type-custom{
             @extend .no-bottom;
           }
+          td{
+            &:nth-of-type(4){
+              background-color: $emptycolor;
+            }
+          }
         }
         &.wcpt-time-1630{
           td{
-            &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(6){
+            &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(5){
+              background-color: $emptycolor;
+            }
+          }
+        }
+        &.wcpt-time-1645{
+          td{
+            &:nth-of-type(2){
               background-color: $emptycolor;
             }
           }
