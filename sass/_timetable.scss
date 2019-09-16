@@ -143,8 +143,10 @@ $room_other: #717071;
           .wcb-session-cell-content{
             a{
               color: #289563;
+              border-color: #289563;
               &:hover{
                 text-decoration: underline !important;
+                border: none;
               }
             }
             .wcpt-session-speakers{
@@ -154,6 +156,9 @@ $room_other: #717071;
                 color: #555;
                 border-color: #555;
                 text-decoration: underline;
+                &:hover{
+                  border: none;
+                }
               }
             }
           }
