@@ -156,6 +156,10 @@ $room_other: #717071;
             a{
               color: #289563;
               border-color: #289563;
+              border: none;
+              text-decoration: none;
+              word-wrap: break-word;
+              word-break: break-all;
               &:hover{
                 text-decoration: underline !important;
                 border: none;
@@ -371,6 +375,7 @@ $room_other: #717071;
                 }
                 a{
                   border: none;
+                  text-decoration: none;
                 }
               }
               &.wcb-track-diamond{
