@@ -194,7 +194,7 @@ $room_other: #717071;
               position: inherit !important;
               top: inherit !important;
               right: inherit !important;
-              width: 100% !important;
+              width: 30px !important;
               display: flex !important;
               margin-top: 10px;
               justify-content: flex-end;
@@ -375,6 +375,10 @@ $room_other: #717071;
             }
             &.wcpt-session-type-session{
               margin-bottom: 0;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
               &::before{
                 border-bottom: none !important;
                 border-top: none !important;
@@ -411,6 +415,7 @@ $room_other: #717071;
                 }
               }
               .wcb-session-cell-content{
+                width: calc(100% - 30px);
                 .wcpt-session-speakers{
                   padding-left: 10px;
                 }
