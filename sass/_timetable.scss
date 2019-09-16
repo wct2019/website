@@ -3,27 +3,44 @@
 -------------------- */
 /*色設定設定
 ----------------------*/
-$tablebordercolor: #e1e1e1;
+$tablebordercolor: #ccc;
+$emptycolor: #f1f1f1;
 $favbtnhovercolor: #d69d12;
 $lunchcolor: rgb(255,245,240);
-$track1: #aceccf;
-$track2: #edde7e;
-$track3: #acdfec;
-$track4: #fcdcea;
+
+$room_ab: #4DAE81;
+$room_cd: #5B9EB7;
+$room_ef: #F39E5F;
+$room_gh: #E16E7F;
+$room_k: #A180A2;
+$room_other: #717071;
+
+.cell-border-rb{
+  border-right: 1px solid $tablebordercolor !important;
+  border-bottom: 1px solid $tablebordercolor !important;
+}
 
 /*タイムテーブル
 ----------------------*/
 .entry-content{
   .wcpt-schedule{
-    border-bottom: 1px solid $tablebordercolor !important;
-    border-right: 1px solid $tablebordercolor !important;
-    border-top-width: 0 !important;
-    border-left-width: 0 !important;
-    td,th{
-      border-top: 1px solid $tablebordercolor !important;
-      border-left: 1px solid $tablebordercolor !important;
-      border-bottom-width: 0 !important;
-      border-right-width: 0 !important;
+    border-top: 1px solid $tablebordercolor !important;
+    border-left: 1px solid $tablebordercolor !important;
+    border-right: 0;
+    border-bottom: 0;
+    th{
+      border-top: 0;
+      border-left: 0;
+      border-bottom: 0;
+      border-right: 0;
+      &:last-of-type{
+        border-right: 1px solid $tablebordercolor !important;
+      }
+    }
+    td{
+      border-top: 0;
+      border-left: 0;
+      @extend .cell-border-rb;
     }
     /*トラック情報設定
     ----------------------*/
@@ -34,59 +51,92 @@ $track4: #fcdcea;
           font-size: 0.9rem;
           font-weight: bold;
           text-align: center;
-          width: 22%;
+          width: 18%;
+          border-bottom: 1px solid $tablebordercolor !important;
           &.wcpt-col-time{
             background: #444444;
             color: #ffffff;
-            width: 12%;
+            width: 10%;
+            border-right: 1px solid $tablebordercolor !important;
           }
-          &:nth-last-of-type(-n+4){
+          &:nth-last-of-type(-n+5){
             .wcpt-track-name{
+              display: flex;
+              flex-flow: column;
+              font-size: 0.9rem;
               &::before{
                 content: "";
                 display: block;
-                width: 25px;
-                height: 25px;
+                height: 20px;
+                width: 100%;
                 background-repeat: no-repeat;
-                background-size: 100% auto;
+                background-size: auto 100%;
                 background-position: center;
-                margin: 0 auto;
+                margin: 5px auto 0;
+              }
+              &::after{
+                display: block;
+                font-size: 0.8rem;
               }
             }
           }
           &:nth-of-type(2){
-            background: $track1;
-            color: darken($track1,65%);
+            background: lighten($room_ab,40%);
+            color: darken($room_ab,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track1.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png');
+              }
+              &::after{
+                content: "(Room AB)";
               }
             }
           }
           &:nth-of-type(3){
-            background: $track2;
-            color: darken($track2,55%);
+            background: lighten($room_cd,35%);
+            color: darken($room_cd,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track2.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png');
+              }
+              &::after{
+                content: "(Room CD)";
               }
             }
           }
           &:nth-of-type(4){
-            background: $track3;
-            color: darken($track3,65%);
+            background: lighten($room_ef,30%);
+            color: darken($room_ef,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track3.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png');
+              }
+              &::after{
+                content: "(Room EF)";
               }
             }
           }
           &:nth-of-type(5){
-            background: $track4;
-            color: darken($track4,80%);
+            background: lighten($room_gh,30%);
+            color: darken($room_gh,20%);
             .wcpt-track-name{
               &::before{
-                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/07/track4.png');
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png');
+              }
+              &::after{
+                content: "(Room GH)";
+              }
+            }
+          }
+          &:nth-of-type(6){
+            background: lighten($room_k,35%);
+            color: darken($room_k,20%);
+            .wcpt-track-name{
+              &::before{
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png');
+              }
+              &::after{
+                content: "(Room K)";
               }
             }
           }
@@ -109,30 +159,58 @@ $track4: #fcdcea;
           &.wcpt-time{
             text-align: center;
             font-size: 0.8rem;
-            vertical-align: middle;
-            background: #f9f9f9;
+            vertical-align: top;
+            background: #d9d9d9;
+            @extend .cell-border-rb;
           }
           .wcb-session-cell-content{
             a{
               color: #289563;
+              border-color: #289563;
               border: none;
+              text-decoration: none;
+              word-wrap: break-word;
+              word-break: break-word;
               &:hover{
                 text-decoration: underline !important;
+                border: none;
+              }
+            }
+            .wcpt-session-speakers{
+              display: block;
+              margin-top: 0.25em;
+              a{
+                color: #555;
+                border-color: #555;
+                text-decoration: underline;
+                &:hover{
+                  border: none;
+                }
               }
             }
           }
           div.wcb-session-favourite-icon{
+            @include mq(sp){
+              position: inherit !important;
+              top: inherit !important;
+              right: inherit !important;
+              width: 30px !important;
+              display: flex !important;
+              margin-top: 10px;
+              justify-content: flex-end;
+            }
             a.fav-session-button{
               border: none;
+              color: #e8e8e8 !important;
               &:hover{
-                color: $favbtnhovercolor;
+                color: #e8e8e8 !important;
               }
             }
           }
           &.wcb-favourite-session{
             div.wcb-session-favourite-icon{
               a.fav-session-button{
-                color: $favbtnhovercolor;
+                color: $favbtnhovercolor !important;
               }
             }
           }
@@ -144,17 +222,87 @@ $track4: #fcdcea;
         }
         /*個別時間帯の設定
         ----------------------*/
-        &.wcpt-time-1000{
+        .no-bottom{
+          border-bottom-width: 0 !important;
+        }
+        &.wcpt-time-1030{
           .wcpt-session-empty{
-            background: $tablebordercolor;
+            background: $emptycolor;
+          }
+          td{
+            &:nth-of-type(3),&:nth-of-type(6){
+              @extend .no-bottom;
+            }
           }
         }
         &.wcpt-time-1100{
           .wcpt-session-empty{
-            border-top-width: 0 !important;
+            background: $emptycolor;
+            @extend .no-bottom;
           }
         }
-        &.wcpt-time-1200{
+        &.wcpt-time-1100{
+          .wcb-track-sun,.wcb-track-heart{
+            @extend .no-bottom;
+          }
+        }
+        &.wcpt-time-1115{
+          td{
+            &:nth-of-type(4),&:nth-of-type(5){
+              @extend .no-bottom;
+            }
+            &:nth-of-type(3),&:nth-of-type(6){
+              background: $emptycolor;
+            }
+          }
+        }
+        &.wcpt-time-1130{
+          td{
+            &:nth-of-type(4){
+              @extend .no-bottom;
+            }
+          }
+        }
+        &.wcpt-time-1445{
+          .wcb-track-clover,.wcb-track-spade{
+            @extend .no-bottom;
+          }
+        }
+        &.wcpt-time-1545{
+          .wcpt-session-type-session{
+            @extend .no-bottom;
+          }
+        }
+        &.wcpt-time-1600{
+          .wcpt-session-type-custom{
+            @extend .no-bottom;
+          }
+          td{
+            &:nth-of-type(4){
+              background-color: $emptycolor;
+            }
+          }
+        }
+        &.wcpt-time-1630{
+          td{
+            &:nth-of-type(2),&:nth-of-type(3),&:nth-of-type(5){
+              background-color: $emptycolor;
+            }
+          }
+        }
+        &.wcpt-time-1645{
+          td{
+            &:nth-of-type(2){
+              background-color: $emptycolor;
+            }
+          }
+        }
+        &.wcpt-time-1345,&.wcpt-time-1430,&.wcpt-time-1445,&.wcpt-time-1500,&.wcpt-time-1515,&.wcpt-time-1530{
+          .wcpt-session-empty{
+            @extend .no-bottom;
+          }
+        }
+        &.wcpt-time-1245{
           td{
             background: $lunchcolor;
           }
@@ -167,8 +315,39 @@ $track4: #fcdcea;
 /*スマートフォン
 ----------------------*/
 @media screen and (max-width: 700px){
+  .mobile-session-diamond{
+    background: lighten($room_ab, 40%) url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png') left .5em center/auto 50% no-repeat;
+    color: darken($room_ab,20%);
+    border-radius: 3px;
+    padding-left: 2em;
+  }
+  .mobile-session-clover{
+    background: lighten($room_cd, 35%) url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png') left .5em center/auto 50% no-repeat;
+    color: darken($room_cd,20%);
+    border-radius: 3px;
+    padding-left: 2em;
+  }
+  .mobile-session-sun{
+    background: lighten($room_ef, 30%) url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png') left .5em center/auto 50% no-repeat;
+    color: darken($room_ef,20%);
+    border-radius: 3px;
+    padding-left: 2em !important;
+  }
+  .mobile-session-heart{
+    background: lighten($room_gh, 30%) url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png') left .5em center/auto 50% no-repeat;
+    color: darken($room_gh,20%);
+    border-radius: 3px;
+    padding-left: 2em;
+  }
+  .mobile-session-spade{
+    background: lighten($room_k, 35%) url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png') left .5em center/auto 50% no-repeat;
+    color: darken($room_k,20%);
+    border-radius: 3px;
+    padding-left: 2em;
+  }
   .entry-content{
     .wcpt-schedule{
+      max-width: 100% !important;
       border-bottom: 0 !important;
       border-right: 0 !important;
       border-top-width: 0 !important;
@@ -195,44 +374,171 @@ $track4: #fcdcea;
               text-align: center;
             }
             &.wcpt-session-type-session{
+              margin-bottom: 0;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: space-between;
               &::before{
                 border-bottom: none !important;
                 border-top: none !important;
                 font-size: 0.9rem;
                 padding: 8px 10px;
                 font-weight: bold;
+                width: 100% !important;
+                float: none !important;
+                height: auto !important;
               }
-            }
-            &:nth-of-type(2){
-              &::before{
-                background: $track1;
-                color: darken($track1,65%);
+              &[data-track-title="Diamond"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room AB)'!important;
+                }
               }
-            }
-            &:nth-of-type(3){
-              &::before{
-                background: $track2;
-                color: darken($track2,55%);
+              &[data-track-title="Clover"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room CD)'!important;
+                }
               }
-            }
-            &:nth-of-type(4){
-              &::before{
-                background: $track3;
-                color: darken($track3,65%);
+              &[data-track-title="Sun"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room EF)'!important;
+                }
               }
-            }
-            &:nth-of-type(5){
-              &::before{
-                background: $track4;
-                color: darken($track4,80%);
+              &[data-track-title="Heart"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room GH)'!important;
+                }
+              }
+              &[data-track-title="Spade"]{
+                &::before{
+                  content: attr( data-track-title ) ' (Room K)'!important;
+                }
+              }
+              .wcb-session-cell-content{
+                width: calc(100% - 30px);
+                .wcpt-session-speakers{
+                  padding-left: 10px;
+                }
+                a{
+                  border: none;
+                  text-decoration: none;
+                }
+              }
+              &.wcb-track-diamond{
+                &::before{
+                  @extend .mobile-session-diamond;
+                }
+              }
+              &.wcb-track-clover{
+                &::before{
+                  @extend .mobile-session-clover;
+                }
+              }
+              &.wcb-track-sun{
+                &::before{
+                  @extend .mobile-session-sun;
+                }
+              }
+              &.wcb-track-heart{
+                &::before{
+                  @extend .mobile-session-heart;
+                }
+              }
+              &.wcb-track-spade{
+                &::before{
+                  @extend .mobile-session-spade;
+                }
               }
             }
           }
           /*個別時間帯の設定
           ----------------------*/
-          &.wcpt-time-1000{
+          .mobile-session-tag{
+            font-size: 0.9rem;
+            font-weight: bold;
+            content: attr( data-track-title );
+            display: block;
+            margin-bottom: 8px;
+            padding: 3px 10px 3px 2em;
+          }
+          &.wcpt-time-1030,&.wcpt-time-1100{
             .wcpt-session-empty{
               display: none;
+            }
+            .wcpt-session-type-custom{
+              &::before{
+                @extend .mobile-session-tag;
+                @extend .mobile-session-sun;
+              }
+            }
+          }
+          &.wcpt-time-1100,&.wcpt-time-1130,&.wcpt-time-1115,&.wcpt-time-1130,&.wcpt-time-1145,&.wcpt-time-1345,&.wcpt-time-1430,&.wcpt-time-1445,&.wcpt-time-1500,&.wcpt-time-1515,&.wcpt-time-1530,&.wcpt-time-1545,&.wcpt-time-1600,&.wcpt-time-1630{
+            .wcpt-session-empty{
+              display: none;
+            }
+          }
+          //休憩セル
+          &.wcpt-time-1145,&.wcpt-time-1430,&.wcpt-time-1530{
+            .wcpt-session-type-custom{
+              &::before{
+                @extend .mobile-session-tag;
+                content: 'Room AB CD GH K';
+                background-color: $emptycolor;
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png');
+                background-size: auto 50%;
+                background-repeat: no-repeat;
+                background-position: right 5em center, right 3.5em center, right 2em center, right .5em center;
+              }
+              &:nth-of-type(2){
+                display: none;
+              }
+            }
+          }
+          &.wcpt-time-1500{
+            .wcpt-session-type-custom{
+              &::before{
+                @extend .mobile-session-tag;
+                content: 'Room AB GH';
+                background-color: $emptycolor;
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png');
+                background-size: auto 50%;
+                background-repeat: no-repeat;
+                background-position: right 2em center, right .5em center;
+              }
+              &:nth-of-type(2){
+                display: none;
+              }
+            }
+          }
+          //閉場
+          &.wcpt-time-1600{
+            .wcpt-session-type-custom{
+              &::before{
+                @extend .mobile-session-tag;
+                @extend .mobile-session-sun;
+              }
+            }
+          }
+          &.wcpt-time-1645{
+            .wcpt-session-type-custom{
+              &::before{
+                @extend .mobile-session-tag;
+                content: 'All Rooms';
+                background-color: $tablebordercolor;
+                background-image: url('https://2019.tokyo.wordcamp.org/files/2019/09/diamond.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/clover.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/sun.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/heart.png'), url('https://2019.tokyo.wordcamp.org/files/2019/09/spade.png');
+                background-size: auto 50%;
+                background-repeat: no-repeat;
+                background-position: right 6.5em center, right 5em center, right 3.5em center, right 2em center, right .5em center;
+              }
+            }
+          }
+          //閉会の挨拶
+          &.wcpt-time-1630{
+            .wcpt-session-type-custom{
+              &::before{
+                @extend .mobile-session-tag;
+                @extend .mobile-session-heart;
+              }
             }
           }
         }

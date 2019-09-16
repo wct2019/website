@@ -77,7 +77,7 @@
           margin-top: 0;
         }
       }
-  
+
       .wcorg-speaker-info {
         .wcorg-speaker-belonging {
           margin: 0;
@@ -86,9 +86,24 @@
           margin: 0;
         }
       }
-  
+
       .wcorg-speaker-comment {
         width: 100%;
+      }
+    }
+  }
+}
+
+.entry{
+  .entry-content{
+    .speaker-avatar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .avatar{
+        width: auto;
+        max-width: 100px;
+        height: auto;
       }
     }
   }
