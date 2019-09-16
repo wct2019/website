@@ -175,6 +175,15 @@ $room_other: #717071;
             }
           }
           div.wcb-session-favourite-icon{
+            @include mq(sp){
+              position: inherit !important;
+              top: inherit !important;
+              right: inherit !important;
+              width: 100% !important;
+              display: flex !important;
+              margin-top: 10px;
+              justify-content: flex-end;
+            }
             a.fav-session-button{
               border: none;
               &:hover{
@@ -351,10 +360,17 @@ $room_other: #717071;
                 font-size: 0.9rem;
                 padding: 8px 10px;
                 font-weight: bold;
+                content: attr( data-track-title )!important;
+                width: 100% !important;
+                float: none !important;
+                height: auto !important;
               }
               .wcb-session-cell-content{
                 .wcpt-session-speakers{
                   padding-left: 10px;
+                }
+                a{
+                  border: none;
                 }
               }
               &.wcb-track-diamond{
