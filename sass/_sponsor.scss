@@ -479,9 +479,6 @@
               @include mq(sp){
                 width: calc(33.3% - 5px);
               }
-              @include mq(sp){
-                min-height: auto;
-              }
               img{
                 padding: 10px;
                 @include mq(sp){
