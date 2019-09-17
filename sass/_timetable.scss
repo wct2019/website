@@ -494,6 +494,7 @@ $room_other: #717071;
               &::before{
                 @extend .mobile-session-tag;
                 @extend .mobile-session-sun;
+                content: 'Sun' attr( data-track-title );
               }
             }
           }
@@ -524,6 +525,7 @@ $room_other: #717071;
               &::before{
                 @extend .mobile-session-tag;
                 @extend .mobile-session-heart;
+                content: 'Heart' attr( data-track-title );
               }
             }
           }
