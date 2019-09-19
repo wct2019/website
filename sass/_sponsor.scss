@@ -233,8 +233,19 @@
     }
     .wcorg-sponsor{
       width: calc(25% - 10px);
+      margin-right: 20px;
+      &:nth-child(4n){
+        margin-right: 0;
+      }
       @include mq(sp){
         width: calc(33.3% - 5px);
+        margin-right: 5px;
+        &:nth-child(4n){
+          margin-right: inherit;
+        }
+        &:nth-child(3n){
+          margin-right: 0;
+        }
       }
     }
   }
@@ -476,8 +487,19 @@
             }
             .sponsor-logo{
               width: calc(25% - 10px);
+              margin-right: 20px;
+              &:nth-child(4n){
+                margin-right: 0;
+              }
               @include mq(sp){
                 width: calc(33.3% - 5px);
+                margin-right: 10px;
+                &:nth-child(4n){
+                  margin-right: inherit;
+                }
+                &:nth-child(3n){
+                  margin-right: 10px;
+                }
               }
               img{
                 padding: 10px;
