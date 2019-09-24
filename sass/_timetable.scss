@@ -159,6 +159,56 @@ $room_other: #717071;
             background: #d9d9d9;
             @extend .cell-border-rb;
           }
+          &.wcb-session-category-designer{
+            &::after{
+              content: 'デザイナー向け';
+              background-color: #cc0000;
+              color: #fff;
+              padding: 5px;
+              border-radius: 3px;
+              font-size: 0.7rem;
+            }
+          }
+          &.wcb-session-category-engineer{
+            &::after{
+              content: 'エンジニア向け';
+              background-color: #0000cc;
+              color: #fff;
+              padding: 5px;
+              border-radius: 3px;
+              font-size: 0.7rem;
+            }
+          }
+          &.wcb-session-category-director{
+            &::after{
+              content: 'ディレクター向け';
+              background-color: #009900;
+              color: #fff;
+              padding: 5px;
+              border-radius: 3px;
+              font-size: 0.7rem;
+            }
+          }
+          &.wcb-session-category-blogger{
+            &::after{
+              content: 'ブロガー向け';
+              background-color: #ff6600;
+              color: #fff;
+              padding: 5px;
+              border-radius: 3px;
+              font-size: 0.7rem;
+            }
+          }
+          &.wcb-session-category-english{
+            &::after{
+              content: '英語セッション';
+              background-color: #bb00ee;
+              color: #fff;
+              padding: 5px;
+              border-radius: 3px;
+              font-size: 0.7rem;
+            }
+          }
           .wcb-session-cell-content{
             a{
               color: #0c824b;
@@ -178,9 +228,11 @@ $room_other: #717071;
               a{
                 color: #555;
                 border-color: #555;
-                text-decoration: underline;
-                &:hover{
+                text-decoration: underline !important;
+                transition: backgroun-color .3s ease;
+                &:hover,&:active{
                   border: none;
+                  background-color: #eee !important;
                 }
               }
             }
