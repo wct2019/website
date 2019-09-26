@@ -22,3 +22,48 @@
 .archive .page-header .page-title .page-description {
   color: #289563;
 }
+
+//セッションのアーカイブにタイトルを表記。
+.tax-wcb_session_category{
+  .page-title{
+    &::after{
+      color: $primary;
+      font-weight: 600;
+    }
+  }
+  &.term-designer{
+    .page-title{
+      &::after{
+        content: 'デザイナー向け';
+      }
+    }
+  }
+  &.term-engineer{
+    .page-title{
+      &::after{
+        content: 'エンジニア向け';
+      }
+    }
+  }
+  &.term-blogger{
+    .page-title{
+      &::after{
+        content: 'ブロガー向け';
+      }
+    }
+  }
+  &.term-director{
+    .page-title{
+      &::after{
+        content: 'ディレクター向け';
+      }
+    }
+  }
+  &.term-english{
+    .page-title{
+      &::after{
+        content: '英語セッション';
+      }
+    }
+  }
+}
