@@ -68,6 +68,11 @@ body{
       .wp-block-latest-posts__post-date{
         font-size: 12px;
         font-weight: normal;
+        white-space: nowrap;
+        margin-left: auto;
+        @include mq(sp){
+          margin-left: 0;
+        }
       }
     }
   }
