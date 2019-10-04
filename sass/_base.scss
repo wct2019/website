@@ -209,6 +209,30 @@ body {
   p {
     font-size: 1rem;
     line-height: 2;
+    &.point-text{
+      font-size: 1.5em;
+      display: flex;
+      font-weight: bold;
+      @include mq(sp){
+        flex-flow: column;
+        align-items: center;
+      }
+      &::before{
+        content: "";
+        display: block;
+        background: url(https://2019.tokyo.wordcamp.org/files/2019/10/pointtext.jpg) no-repeat;
+        width: 40px;
+        height: 40px;
+        background-size: 100% auto;
+        flex-shrink: 0;
+        margin-right: 0.5em;
+        margin-top: 0.3em;
+        @include mq(sp){
+          margin-top: 0;
+          margin-right: 0;
+        }
+      }
+    }
   }
   .has-small-font-size {
     font-size: 0.85rem !important;
